@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-obsidian text-ink font-body antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-heading;
+  }
+
+  /* Respeita usuários que preferem menos movimento */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* Container padrão da página */
+  .section-wrap {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8;
+  }
+
+  /* Espaçamento vertical entre seções (mobile-first) */
+  .section-pad {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+
+  /* Skip link acessível — CSS puro pra garantir o reveal no foco
+     (variantes focus do Tailwind não estavam sobrescrevendo a posição). */
+  .skip-link {
+    position: fixed;
+    left: 1rem;
+    top: -4rem;
+    z-index: 60;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-family: var(--font-space-grotesk), sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #07090f;
+    background: linear-gradient(135deg, #00d9ff, #2a72ff 45%, #7c4dff);
+    transition: top 0.2s ease;
+  }
+  .skip-link:focus {
+    top: 1rem;
+    outline: none;
+  }
+  .skip-link:focus-visible {
+    box-shadow: 0 0 0 2px #07090f, 0 0 0 4px #00d9ff;
+  }
+
+  /* Label/eyebrow estilo HUD em mono */
+  .eyebrow {
+    @apply inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.18em] text-brand-cyan;
+  }
+
+  /* Card base Carbon com borda */
+  .card-base {
+    @apply rounded-2xl border border-edge bg-carbon;
+  }
+
+  /* Texto com gradiente da marca */
+  .text-gradient {
+    @apply bg-brand-gradient bg-clip-text text-transparent;
+  }
+
+  /* Borda em gradiente (wrapper) */
+  .gradient-border {
+    position: relative;
+    border-radius: 1rem;
+    background: linear-gradient(135deg, #00d9ff, #2a72ff 45%, #7c4dff);
+    padding: 1px;
+  }
+  .gradient-border > * {
+    border-radius: calc(1rem - 1px);
+  }
+}
+
+@layer utilities {
+  /* Linha de acento cyan no topo dos cards (assinatura visual da marca) */
+  .accent-top {
+    position: relative;
+    overflow: hidden;
+  }
+  .accent-top::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #00d9ff, #7c4dff, transparent);
+    opacity: 0.7;
+  }
+
+  /* Glow radial decorativo de fundo */
+  .glow-blob {
+    filter: blur(90px);
+    opacity: 0.35;
+    pointer-events: none;
+  }
+
+  /* Banda de seção com leve tom carbon + hairline em gradiente no topo.
+     Cria "capítulos" visuais e quebra a monotonia do fundo obsidian. */
+  .section-tint {
+    position: relative;
+    background:
+      radial-gradient(120% 100% at 50% 0%, rgba(18, 24, 38, 0.55), transparent 70%);
+  }
+  .section-tint::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(38, 49, 66, 0.9),
+      transparent
+    );
+  }
+
+  /* Grão/ruído sutil sobre toda a página — profundidade premium */
+  .grain-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    /* Sem mix-blend-mode: evita recompor a viewport inteira a cada scroll
+       (jank em mobile). Opacidade baixa já entrega a textura. */
+    opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+}
