@@ -30,7 +30,8 @@ export default function Offer() {
               </div>
 
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-                Pacote <span className="text-gradient">Presença Digital Completa</span>
+                Pacote{" "}
+                <span className="text-brand-cyan">Presença Digital Completa</span>
               </h2>
 
               {/* Itens de setup */}
@@ -58,7 +59,7 @@ export default function Offer() {
                 </p>
                 <p className="flex items-baseline gap-2">
                   <span className="text-sm text-ink-muted">Hoje por</span>
-                  <span className="font-heading text-4xl font-bold text-gradient sm:text-5xl">
+                  <span className="font-heading text-4xl font-bold text-brand-cyan sm:text-5xl">
                     R$ 350
                   </span>
                   <span className="font-mono text-xs text-ink-muted">setup único</span>

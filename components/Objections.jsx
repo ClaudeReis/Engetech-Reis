@@ -21,12 +21,7 @@ export default function Objections() {
   return (
     <section className="section-pad section-tint">
       <div className="section-wrap">
-        <SectionHeading
-          number="05"
-          accent="blue"
-          eyebrow="sem rodeios"
-          title="O que você provavelmente está pensando agora"
-        />
+        <SectionHeading title="O que você provavelmente está pensando agora" />
         <Reveal delay={120}>
           <div className="mt-10 max-w-3xl">
             <Accordion items={OBJECTIONS} defaultOpen={0} />

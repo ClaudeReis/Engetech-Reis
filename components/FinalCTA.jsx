@@ -15,7 +15,7 @@ export default function FinalCTA() {
         <div className="mx-auto max-w-2xl text-center">
           <Reveal>
             <h2 className="text-balance text-2xl font-bold leading-tight tracking-tight sm:text-3xl lg:text-4xl">
-              Resolva isso <span className="text-gradient">hoje</span>.
+              Resolva isso <span className="text-brand-cyan">hoje</span>.
             </h2>
           </Reveal>
           <Reveal delay={100}>

@@ -11,9 +11,8 @@ import { waLink, WA_MESSAGES } from "@/lib/config";
 export default function Hero({
   headline = (
     <>
-      Seu negócio <span className="text-gradient">some</span> quando o cliente
-      pesquisa. E quando ele manda mensagem, você já{" "}
-      <span className="text-gradient">perdeu a venda</span>.
+      Seu negócio some quando o cliente pesquisa. E quando ele manda mensagem,
+      você já <span className="text-gradient">perdeu a venda</span>.
     </>
   ),
 }) {

@@ -41,12 +41,7 @@ export default function FAQ() {
   return (
     <section id="faq" className="section-pad section-tint">
       <div className="section-wrap">
-        <SectionHeading
-          number="06"
-          accent="violet"
-          eyebrow="perguntas frequentes"
-          title="Ainda com dúvida? A gente responde."
-        />
+        <SectionHeading title="Ainda com dúvida? A gente responde." />
         <Reveal delay={120}>
           <div className="mt-10 max-w-3xl">
             <Accordion items={FAQS} />

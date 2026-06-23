@@ -22,12 +22,7 @@ export default function Benefits() {
   return (
     <section className="section-pad">
       <div className="section-wrap">
-        <SectionHeading
-          number="03"
-          accent="violet"
-          eyebrow="o que muda pra você"
-          title="O resultado prático no seu dia a dia"
-        />
+        <SectionHeading title="O resultado prático no seu dia a dia" />
 
         {/* Bento assimétrico: dois cards largos em destaque (diagonal) */}
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

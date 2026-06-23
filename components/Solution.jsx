@@ -23,12 +23,7 @@ export default function Solution() {
   return (
     <section className="section-pad section-tint">
       <div className="section-wrap">
-        <SectionHeading
-          number="02"
-          accent="blue"
-          eyebrow="a solução"
-          title="Duas peças que trabalham juntas pelo seu negócio"
-        />
+        <SectionHeading title="Duas peças que trabalham juntas pelo seu negócio" />
 
         <div className="mt-10 grid gap-5 md:grid-cols-2">
           {SOLUTIONS.map(({ icon: Icon, tag, title, text, points }, i) => (

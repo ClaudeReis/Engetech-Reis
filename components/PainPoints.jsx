@@ -29,12 +29,7 @@ export default function PainPoints() {
   return (
     <section className="section-pad">
       <div className="section-wrap">
-        <SectionHeading
-          number="01"
-          accent="cyan"
-          eyebrow="o problema"
-          title="Você já se pegou nessas situações?"
-        />
+        <SectionHeading title="Você já se pegou nessas situações?" />
 
         <ul className="mt-10 grid gap-3 sm:grid-cols-2">
           {PAINS.map(({ icon: Icon, text }, i) => (
