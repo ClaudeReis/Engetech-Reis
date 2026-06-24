@@ -5,7 +5,7 @@ import SectionHeading from "./SectionHeading";
 const OBJECTIONS = [
   {
     q: "“É caro!”",
-    a: "R$350 de setup + R$200/mês dá menos de R$7 por dia. É menos do que um impulsionamento no Instagram que some em 3 dias. Aqui você tem ativo permanente trabalhando por você todo mês.",
+    a: "R$550 de setup + R$500/mês dá cerca de R$17 por dia pra aparecer no Google e ter atendimento automático 24h. É menos do que muita gente gasta impulsionando post que some em 3 dias — e aqui é ativo permanente trabalhando por você todo mês.",
   },
   {
     q: "“Não preciso de site. Meu Instagram resolve.”",

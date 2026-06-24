@@ -46,7 +46,7 @@ export default function Hero({
         </Reveal>
 
         <Reveal delay={80}>
-          <h1 className="max-w-3xl text-balance text-3xl font-bold leading-[1.12] tracking-tight sm:text-4xl lg:text-5xl">
+          <h1 className="max-w-3xl text-balance text-4xl font-bold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
             {headline}
           </h1>
         </Reveal>
@@ -74,7 +74,7 @@ export default function Hero({
 
             <p className="flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-xs text-ink-muted">
               <span className="inline-flex items-center gap-1.5">
-                <ShieldCheck size={13} aria-hidden="true" /> Sem contrato longo
+                <ShieldCheck size={13} aria-hidden="true" /> Contrato mínimo de 6 meses
               </span>
               <span aria-hidden="true" className="text-edge">•</span>
               <span className="inline-flex items-center gap-1.5">

@@ -40,7 +40,7 @@ export default function Footer() {
         {/* PS de reforço */}
         <div className="mt-10 rounded-xl border border-edge bg-obsidian/50 p-4">
           <p className="text-pretty text-sm leading-relaxed text-ink-muted">
-            <span className="font-semibold text-ink">PS:</span> o preço de R$350 é
+            <span className="font-semibold text-ink">PS:</span> o preço de R$550 é
             de lançamento. Quando as primeiras vagas fecharem, volta ao valor
             normal.
           </p>

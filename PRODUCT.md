@@ -18,7 +18,7 @@ das redes nem ter que entender de tecnologia".
 
 Landing page de alta conversão da EngeTech Reis (agência de engenharia digital)
 que vende o Pacote Presença Digital Completa (Landing Page + Chatbot Instagram)
-por R$350 de setup + recorrência. Objetivo único: gerar conversa no WhatsApp.
+por R$550 de setup + recorrência. Objetivo único: gerar conversa no WhatsApp.
 Sucesso = clique no CTA do WhatsApp com mensagem pré-preenchida. A página
 substitui o trabalho de vendas: educa a dor, mostra a solução, quebra objeções
 de preço/necessidade, dá garantia e empurra para a ação.

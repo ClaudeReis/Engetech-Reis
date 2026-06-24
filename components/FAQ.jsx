@@ -21,7 +21,7 @@ const FAQS = [
   },
   {
     q: "Como funciona o suporte mensal?",
-    a: "Por R$200/mês mantemos o chatbot ativo, ajustamos fluxos e você tem canal direto pra tirar dúvidas.",
+    a: "Por R$350/mês mantemos o chatbot ativo, ajustamos fluxos e você tem canal direto pra tirar dúvidas.",
   },
   {
     q: "Como pago?",

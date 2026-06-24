@@ -10,7 +10,7 @@ const SETUP_ITEMS = [
 ];
 
 const MONTHLY_ITEMS = [
-  { label: "Chatbot ativo e atualizado", value: "R$ 200/mês" },
+  { label: "Chatbot ativo e atualizado", value: "R$ 350/mês" },
   { label: "Hospedagem + 1 atualização de conteúdo/mês da LP", value: "R$ 150/mês" },
 ];
 
@@ -60,7 +60,7 @@ export default function Offer() {
                 <p className="flex items-baseline gap-2">
                   <span className="text-sm text-ink-muted">Hoje por</span>
                   <span className="font-heading text-4xl font-bold text-brand-cyan sm:text-5xl">
-                    R$ 350
+                    R$ 550
                   </span>
                   <span className="font-mono text-xs text-ink-muted">setup único</span>
                 </p>
@@ -85,7 +85,10 @@ export default function Offer() {
                 <div className="my-3 h-px bg-edge" />
                 <p className="flex items-center justify-between text-sm">
                   <span className="font-semibold text-ink">Total recorrência</span>
-                  <span className="font-mono font-semibold text-brand-cyan">R$ 350/mês</span>
+                  <span className="font-mono font-semibold text-brand-cyan">R$ 500/mês</span>
+                </p>
+                <p className="mt-3 font-mono text-[11px] text-ink-muted">
+                  Contrato mínimo de 6 meses
                 </p>
               </div>
 

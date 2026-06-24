@@ -15,7 +15,7 @@ export default function Urgency() {
                 <span className="font-semibold text-ink">
                   Oferta de lançamento — vagas limitadas.
                 </span>{" "}
-                O preço promocional de R$350 existe porque estamos nos primeiros
+                O preço promocional de R$550 existe porque estamos nos primeiros
                 clientes e queremos construir portfólio com quem acredita no
                 serviço.
               </p>

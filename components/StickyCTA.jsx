@@ -40,7 +40,7 @@ export default function StickyCTA() {
             Presença digital completa
           </p>
           <p className="truncate font-mono text-[11px] text-ink-muted">
-            setup R$350 • em 24h
+            setup R$550 • em 24h
           </p>
         </div>
         <a
