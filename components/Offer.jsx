@@ -60,7 +60,7 @@ export default function Offer() {
                 <p className="flex items-baseline gap-2">
                   <span className="text-sm text-ink-muted">Hoje por</span>
                   <span className="font-heading text-4xl font-bold text-brand-cyan sm:text-5xl">
-                    R$ 550
+                    R$ 500
                   </span>
                   <span className="font-mono text-xs text-ink-muted">setup único</span>
                 </p>
