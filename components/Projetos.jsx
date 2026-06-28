@@ -87,6 +87,8 @@ function ProjectCard({ project, screenshotHeight = "h-44", fadeHeight = "h-10" }
               <img
                 src={asset(screenshot)}
                 alt={`Home do site ${name}`}
+                loading="lazy"
+                decoding="async"
                 className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
               />
               {/* Inner ring sutil para separar screenshots escuros do card */}

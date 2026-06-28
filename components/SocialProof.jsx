@@ -86,6 +86,8 @@ export default function SocialProof() {
                     <img
                       src={asset("/founder.webp")}
                       alt="Jonathan Reis, fundador da EngeTech Reis, em frente ao setup de desenvolvimento"
+                      loading="lazy"
+                      decoding="async"
                       className="absolute inset-0 h-full w-full object-cover"
                       style={{ objectPosition: "62% center" }}
                     />

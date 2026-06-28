@@ -2,7 +2,7 @@ import Accordion from "./Accordion";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 
-const FAQS = [
+export const FAQS = [
   {
     q: "Quanto tempo leva pra ficar pronto?",
     a: "A LP fica pronta em até 7 dias úteis após o briefing. O chatbot, em até 5 dias úteis. Você acompanha tudo.",

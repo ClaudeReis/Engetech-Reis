@@ -1,5 +1,7 @@
 import "./globals.css";
 import { Space_Grotesk, Sora, JetBrains_Mono } from "next/font/google";
+import JsonLd from "@/components/JsonLd";
+import { SITE_URL } from "@/lib/config";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -23,10 +25,10 @@ const jetBrains = JetBrains_Mono({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://engetechreis.com.br"),
+  metadataBase: new URL(`${SITE_URL}/`),
   title: "EngeTech Reis — Presença digital que aparece, responde e vende",
   description:
-    "Landing Pages, sites e chatbots para Instagram que colocam seu negócio no Google e respondem seus clientes na hora certa. Sem depender só das redes sociais.",
+    "Landing pages, sites e chatbots para Instagram que colocam seu negócio no Google e respondem na hora. Presença digital para negócios no Rio de Janeiro.",
   keywords: [
     "landing page",
     "chatbot instagram",
@@ -36,12 +38,31 @@ export const metadata = {
     "EngeTech Reis",
     "Rio de Janeiro",
   ],
+  alternates: {
+    canonical: "./",
+  },
   openGraph: {
     title: "EngeTech Reis — Presença digital que aparece, responde e vende",
     description:
       "Design que atrai. Código que estrutura. Automação que vende.",
+    url: "./",
+    siteName: "EngeTech Reis",
     type: "website",
     locale: "pt_BR",
+    images: [
+      {
+        url: `${SITE_URL}/og.png`,
+        width: 1200,
+        height: 630,
+        alt: "EngeTech Reis — presença digital que aparece, responde e vende",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "EngeTech Reis — Presença digital que aparece, responde e vende",
+    description: "Design que atrai. Código que estrutura. Automação que vende.",
+    images: [`${SITE_URL}/og.png`],
   },
   robots: { index: true, follow: true },
 };
@@ -86,6 +107,9 @@ export default function RootLayout({ children }) {
         <noscript>
           <style>{`[data-reveal]{opacity:1 !important;transform:none !important;}`}</style>
         </noscript>
+
+        {/* Dados estruturados: negócio + FAQ (rich results no Google) */}
+        <JsonLd />
       </head>
       <body>{children}</body>
     </html>
