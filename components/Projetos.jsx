@@ -1,4 +1,5 @@
 import Reveal from "./Reveal";
+import { asset } from "@/lib/asset";
 
 const PROJECTS = [
   {
@@ -84,7 +85,7 @@ function ProjectCard({ project, screenshotHeight = "h-44", fadeHeight = "h-10" }
           {screenshot ? (
             <>
               <img
-                src={screenshot}
+                src={asset(screenshot)}
                 alt={`Home do site ${name}`}
                 className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
               />

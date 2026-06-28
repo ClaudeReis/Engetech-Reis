@@ -8,7 +8,7 @@ export default function SecondaryOffer() {
     <section className="pb-16 sm:pb-20">
       <div className="section-wrap">
         <Reveal>
-          <div className="card-base mx-auto flex max-w-2xl flex-col gap-6 p-6 transition-all duration-300 hover:border-brand-blue/40 hover:shadow-glow sm:flex-row sm:items-center sm:justify-between sm:p-7">
+          <div className="card-base flex flex-col gap-6 p-6 transition-all duration-300 hover:border-brand-blue/40 hover:shadow-glow sm:flex-row sm:items-center sm:justify-between sm:gap-10 sm:p-8">
             <div className="flex-1">
               <div className="flex items-center gap-2.5">
                 <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-edge bg-obsidian text-brand-blue">

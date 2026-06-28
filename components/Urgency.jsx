@@ -6,7 +6,7 @@ export default function Urgency() {
     <section className="pb-16 sm:pb-20">
       <div className="section-wrap">
         <Reveal>
-          <div className="gradient-border mx-auto max-w-3xl">
+          <div className="gradient-border">
             <div className="flex items-start gap-4 rounded-2xl bg-carbon px-5 py-5 sm:px-7">
               <span className="mt-0.5 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-brand-gradient text-obsidian">
                 <Zap size={18} aria-hidden="true" />

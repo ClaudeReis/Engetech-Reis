@@ -12,14 +12,14 @@ export default function FinalCTA() {
         className="glow-blob absolute -bottom-20 left-1/2 h-72 w-80 -translate-x-1/2 rounded-full bg-brand-violet/40"
       />
       <div className="section-wrap relative">
-        <div className="mx-auto max-w-2xl text-center">
+        <div className="max-w-2xl">
           <Reveal>
-            <h2 className="text-balance text-2xl font-bold leading-tight tracking-tight sm:text-3xl lg:text-4xl">
+            <h2 className="text-balance text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
               Resolva isso <span className="text-brand-cyan">hoje</span>.
             </h2>
           </Reveal>
           <Reveal delay={100}>
-            <p className="mx-auto mt-5 max-w-xl text-pretty leading-relaxed text-ink-muted">
+            <p className="mt-5 max-w-xl text-pretty leading-relaxed text-ink-muted">
               Você pode continuar perdendo lead por falta de presença ou por
               demora no atendimento. Ou pode resolver isso hoje, com investimento
               menor do que você imagina, e ter seu negócio aparecendo e
@@ -27,7 +27,7 @@ export default function FinalCTA() {
             </p>
           </Reveal>
           <Reveal delay={200}>
-            <div className="mt-8 flex flex-col items-center gap-3">
+            <div className="mt-8 flex flex-col items-start gap-3">
               <CTAButton
                 href={waLink(WA_MESSAGES.final)}
                 track="cta_final"

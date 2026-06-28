@@ -23,6 +23,13 @@ const nextConfig = {
   // Prefixo do repositório, aplicado só no build do GitHub Pages.
   basePath: isGithubPages ? `/${repo}` : undefined,
   assetPrefix: isGithubPages ? `/${repo}/` : undefined,
+
+  // Exposto ao client. No export estático, nem next/image nem <img> aplicam
+  // o basePath sozinhos no src renderizado — por isso prefixamos à mão via
+  // lib/asset.js usando esta variável.
+  env: {
+    NEXT_PUBLIC_BASE_PATH: isGithubPages ? `/${repo}` : "",
+  },
 };
 
 export default nextConfig;

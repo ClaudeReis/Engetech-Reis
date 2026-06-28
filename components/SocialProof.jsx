@@ -1,7 +1,7 @@
-import Image from "next/image";
 import { Star, Quote } from "lucide-react";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
+import { asset } from "@/lib/asset";
 
 // Provas operacionais honestas (não infladas) — coerentes com a fase de
 // lançamento. TODO: ao ter histórico real, trocar por nº de clientes/leads.
@@ -76,36 +76,39 @@ export default function SocialProof() {
             ))}
           </div>
         ) : (
-          /* Founder block: foto + bio + honestidade de lançamento */
+          /* Founder block: foto + bio — largura cheia, alinhado à esquerda */
           <Reveal>
-            <div className="gradient-border mx-auto mt-6 max-w-3xl">
+            <div className="gradient-border mt-6">
               <div className="overflow-hidden rounded-[calc(1rem-1px)] bg-carbon">
                 <div className="flex flex-col sm:flex-row">
                   {/* Foto — rosto está na metade direita da imagem */}
-                  <div className="relative h-72 w-full shrink-0 sm:h-auto sm:w-72">
-                    <Image
-                      src="/founder.webp"
+                  <div className="relative h-72 w-full shrink-0 sm:h-auto sm:w-72 lg:w-96">
+                    <img
+                      src={asset("/founder.webp")}
                       alt="Jonathan Reis, fundador da EngeTech Reis, em frente ao setup de desenvolvimento"
-                      fill
-                      className="object-cover"
+                      className="absolute inset-0 h-full w-full object-cover"
                       style={{ objectPosition: "62% center" }}
-                      sizes="(max-width: 640px) 100vw, 288px"
                     />
                     {/* Fade inferior no mobile para fundir com o texto abaixo */}
                     <div
                       className="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-carbon to-transparent sm:hidden"
                       aria-hidden="true"
                     />
+                    {/* Fade lateral no desktop para fundir a foto no card */}
+                    <div
+                      className="pointer-events-none absolute inset-y-0 right-0 hidden w-16 bg-gradient-to-l from-carbon to-transparent sm:block"
+                      aria-hidden="true"
+                    />
                   </div>
                   {/* Bio */}
-                  <div className="flex flex-col justify-center p-6 sm:p-8">
+                  <div className="flex flex-col justify-center p-6 sm:p-8 lg:p-10">
                     <p className="font-mono text-xs uppercase tracking-widest text-brand-cyan">
                       Fundador · EngeTech Reis
                     </p>
-                    <h3 className="mt-1 font-heading text-2xl font-semibold text-ink">
+                    <h3 className="mt-1 font-heading text-2xl font-semibold text-ink lg:text-3xl">
                       Jonathan Reis
                     </h3>
-                    <p className="mt-3 text-pretty leading-relaxed text-ink-muted">
+                    <p className="mt-3 max-w-2xl text-pretty leading-relaxed text-ink-muted lg:text-lg">
                       Você fala diretamente com quem constrói. Cada site e
                       automação que saem daqui são feitos por mim — do briefing
                       ao ar. Sem equipe escondida, sem terceirização.
