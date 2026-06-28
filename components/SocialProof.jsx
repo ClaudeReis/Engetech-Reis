@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Star, Quote } from "lucide-react";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
@@ -75,19 +76,43 @@ export default function SocialProof() {
             ))}
           </div>
         ) : (
-          /* Sem depoimentos ainda: honestidade em vez de prova social falsa. */
+          /* Founder block: foto + bio + honestidade de lançamento */
           <Reveal>
-            <div className="card-base mx-auto mt-6 max-w-2xl p-6 sm:p-8">
-              <h3 className="font-heading text-xl font-semibold text-ink">
-                Sem depoimento inventado — ainda.
-              </h3>
-              <p className="mt-3 max-w-[60ch] text-pretty leading-relaxed text-ink-muted">
-                A EngeTech Reis está começando, e a gente prefere ser honesto a
-                encher a página de prova social falsa. É por isso que o preço é de
-                lançamento: você entra como um dos primeiros casos, com{" "}
-                <span className="text-ink">garantia de 7 dias</span>. Seu resultado
-                vira a nossa prova social.
-              </p>
+            <div className="gradient-border mx-auto mt-6 max-w-3xl">
+              <div className="overflow-hidden rounded-[calc(1rem-1px)] bg-carbon">
+                <div className="flex flex-col sm:flex-row">
+                  {/* Foto — rosto está na metade direita da imagem */}
+                  <div className="relative h-72 w-full shrink-0 sm:h-auto sm:w-72">
+                    <Image
+                      src="/founder.webp"
+                      alt="Jonathan Reis, fundador da EngeTech Reis, em frente ao setup de desenvolvimento"
+                      fill
+                      className="object-cover"
+                      style={{ objectPosition: "62% center" }}
+                      sizes="(max-width: 640px) 100vw, 288px"
+                    />
+                    {/* Fade inferior no mobile para fundir com o texto abaixo */}
+                    <div
+                      className="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-carbon to-transparent sm:hidden"
+                      aria-hidden="true"
+                    />
+                  </div>
+                  {/* Bio */}
+                  <div className="flex flex-col justify-center p-6 sm:p-8">
+                    <p className="font-mono text-xs uppercase tracking-widest text-brand-cyan">
+                      Fundador · EngeTech Reis
+                    </p>
+                    <h3 className="mt-1 font-heading text-2xl font-semibold text-ink">
+                      Jonathan Reis
+                    </h3>
+                    <p className="mt-3 text-pretty leading-relaxed text-ink-muted">
+                      Você fala diretamente com quem constrói. Cada site e
+                      automação que saem daqui são feitos por mim — do briefing
+                      ao ar. Sem equipe escondida, sem terceirização.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </Reveal>
         )}

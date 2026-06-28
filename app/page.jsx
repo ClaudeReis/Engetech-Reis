@@ -5,6 +5,7 @@ import PainPoints from "@/components/PainPoints";
 import Solution from "@/components/Solution";
 import Benefits from "@/components/Benefits";
 import SocialProof from "@/components/SocialProof";
+import Projetos from "@/components/Projetos";
 import Offer from "@/components/Offer";
 import SecondaryOffer from "@/components/SecondaryOffer";
 import Objections from "@/components/Objections";
@@ -40,9 +41,11 @@ export default function Home() {
         <Solution />
         {/* 5. Benefícios */}
         <Benefits />
-        {/* 6. Prova social (placeholders marcados) */}
+        {/* 6. Prova social + fundador */}
         <SocialProof />
-        {/* 7. Oferta principal — Pacote Presença Digital Completa */}
+        {/* 7. Portfólio — Nossos Projetos */}
+        <Projetos />
+        {/* 8. Oferta principal — Pacote Presença Digital Completa */}
         <Offer />
         {/* 8. Oferta secundária — Site Institucional */}
         <SecondaryOffer />
