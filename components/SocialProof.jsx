@@ -8,7 +8,7 @@ import { asset } from "@/lib/asset";
 const STATS = [
   { value: "24h", label: "atendimento sem parar" },
   { value: "0,8s", label: "pra responder um lead" },
-  { value: "7 dias", label: "pra sua LP no ar" },
+  { value: "7 dias", label: "pro seu site no ar" },
 ];
 
 // Depoimentos REAIS. Comece vazio — a seção de depoimentos só aparece quando

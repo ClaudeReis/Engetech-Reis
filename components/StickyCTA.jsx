@@ -39,8 +39,8 @@ export default function StickyCTA() {
           <p className="truncate font-heading text-sm font-semibold leading-tight text-ink">
             Presença digital completa
           </p>
-          <p className="truncate font-mono text-[11px] text-ink-muted">
-            setup R$500 • em 24h
+          <p className="truncate font-mono text-xs text-ink-muted">
+            R$497 • resposta em 24h
           </p>
         </div>
         <a

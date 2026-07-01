@@ -5,7 +5,7 @@ import SectionHeading from "./SectionHeading";
 export const FAQS = [
   {
     q: "Quanto tempo leva pra ficar pronto?",
-    a: "A LP fica pronta em até 7 dias úteis após o briefing. O chatbot, em até 5 dias úteis. Você acompanha tudo.",
+    a: "Sua página fica pronta em até 7 dias úteis após o briefing. O chatbot, em até 5 dias úteis. Você acompanha tudo.",
   },
   {
     q: "Funciona pra qualquer tipo de negócio?",
@@ -21,15 +21,15 @@ export const FAQS = [
   },
   {
     q: "Como funciona o suporte mensal?",
-    a: "Por R$350/mês mantemos o chatbot ativo, ajustamos fluxos e você tem canal direto pra tirar dúvidas.",
+    a: "A mensalidade de R$497 cobre tudo: chatbot ativo com ajustes de fluxo, hospedagem, 1 atualização de conteúdo por mês e canal direto pra tirar dúvidas.",
   },
   {
     q: "Como pago?",
     a: "Pix ou cartão. O setup é cobrado na aprovação do projeto. A mensalidade começa no mês seguinte à entrega.",
   },
   {
-    q: "Qual a diferença entre LP e site completo?",
-    a: "A Landing Page é uma página única, focada em converter — ideal pra começar rápido e com investimento baixo. O site institucional tem mais páginas e mais profundidade — investimento varia de R$800 a R$10.000 conforme a complexidade do projeto.",
+    q: "Qual a diferença entre Landing Page e site completo?",
+    a: "A Landing Page é uma página única, focada em converter — ideal pra começar rápido e com investimento baixo. O site institucional tem mais páginas e mais profundidade — investimento a partir de R$997, conforme a complexidade do projeto.",
   },
   {
     q: "Por que o site não tem preço fixo?",

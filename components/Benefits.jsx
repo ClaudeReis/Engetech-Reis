@@ -1,21 +1,13 @@
-import {
-  Search,
-  Timer,
-  Coffee,
-  BadgeCheck,
-  Moon,
-  Sprout,
-} from "lucide-react";
+import { Search, Moon, Coffee } from "lucide-react";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 
+// 3 resultados essenciais (era 6 — credibilidade e preço já são cobertos
+// pela seção de oferta; menos cards = oferta chega mais cedo no scroll).
 const BENEFITS = [
   { icon: Search, text: "Apareça no Google mesmo sem seguidores.", featured: true },
-  { icon: Timer, text: "Nunca mais perca um lead por demora." },
+  { icon: Moon, text: "Nenhum lead perdido: seu negócio responde na hora, mesmo de madrugada." },
   { icon: Coffee, text: "Libere seu tempo de responder sempre as mesmas perguntas." },
-  { icon: BadgeCheck, text: "Passe credibilidade imediata." },
-  { icon: Moon, text: "Seu negócio funciona mesmo quando você está dormindo.", featured: true },
-  { icon: Sprout, text: "Entrada acessível pra começar a ter resultado online." },
 ];
 
 export default function Benefits() {
@@ -24,14 +16,9 @@ export default function Benefits() {
       <div className="section-wrap">
         <SectionHeading title="O resultado prático no seu dia a dia" />
 
-        {/* Bento assimétrico: dois cards largos em destaque (diagonal) */}
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid gap-4 sm:grid-cols-3">
           {BENEFITS.map(({ icon: Icon, text, featured }, i) => (
-            <Reveal
-              key={text}
-              delay={(i % 3) * 80}
-              className={featured ? "lg:col-span-2" : ""}
-            >
+            <Reveal key={text} delay={i * 80}>
               <div
                 className={`group flex h-full flex-col gap-4 rounded-2xl border p-6 transition-all duration-300 active:scale-[0.98] ${
                   featured

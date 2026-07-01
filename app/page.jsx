@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import ValueProp from "@/components/ValueProp";
 import PainPoints from "@/components/PainPoints";
 import Solution from "@/components/Solution";
 import Benefits from "@/components/Benefits";
@@ -33,20 +32,19 @@ export default function Home() {
       <main id="conteudo">
         {/* 1. Hero / Headline (Variação A) */}
         <Hero />
-        {/* 2. Abertura / Proposta de valor */}
-        <ValueProp />
-        {/* 3. Identificação da dor */}
+        {/* 2. Identificação da dor (absorveu a antiga ValueProp) */}
         <PainPoints />
-        {/* 4. Apresentação da solução */}
+        {/* 3. Apresentação da solução */}
         <Solution />
-        {/* 5. Benefícios */}
+        {/* 4. Benefícios */}
         <Benefits />
-        {/* 6. Prova social + fundador */}
+        {/* 5. Prova social + fundador */}
         <SocialProof />
-        {/* 7. Portfólio — Nossos Projetos */}
-        <Projetos />
-        {/* 8. Oferta principal — Pacote Presença Digital Completa */}
+        {/* 6. Oferta principal — sobe na página: preço chega mais cedo
+            (padrão price → proof; portfólio vira prova logo depois) */}
         <Offer />
+        {/* 7. Portfólio — Nossos Projetos (prova pós-preço) */}
+        <Projetos />
         {/* 8. Oferta secundária — Site Institucional */}
         <SecondaryOffer />
         {/* 9. Quebra de objeções */}

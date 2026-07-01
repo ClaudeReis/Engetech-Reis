@@ -29,7 +29,10 @@ export default function PainPoints() {
   return (
     <section className="section-pad">
       <div className="section-wrap">
-        <SectionHeading title="Você já se pegou nessas situações?" />
+        <SectionHeading
+          title="Você já se pegou nessas situações?"
+          subtitle="Você trabalha duro e atende bem. Mas na hora em que o cliente procura, seu negócio não aparece — e o lead vai embora."
+        />
 
         <ul className="mt-10 grid gap-3 sm:grid-cols-2">
           {PAINS.map(({ icon: Icon, text }, i) => (
@@ -45,6 +48,16 @@ export default function PainPoints() {
             </Reveal>
           ))}
         </ul>
+
+        {/* Ponte pra solução — fecha a dor com a promessa (essência da antiga ValueProp) */}
+        <Reveal delay={120}>
+          <p className="mt-8 max-w-2xl text-pretty text-lg leading-relaxed text-ink-muted">
+            A EngeTech Reis resolve exatamente isso:{" "}
+            <span className="text-ink">presença que aparece onde a busca acontece</span> e{" "}
+            <span className="text-ink">automação que atende na hora</span> — sem
+            você precisar estar online o tempo todo.
+          </p>
+        </Reveal>
       </div>
     </section>
   );

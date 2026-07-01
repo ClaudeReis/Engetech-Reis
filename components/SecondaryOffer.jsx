@@ -1,7 +1,7 @@
 import { Building2, ArrowRight } from "lucide-react";
 import CTAButton from "./CTAButton";
 import Reveal from "./Reveal";
-import { waLink, WA_MESSAGES } from "@/lib/config";
+import { waLink, WA_MESSAGES, PRICING } from "@/lib/config";
 
 export default function SecondaryOffer() {
   return (
@@ -22,7 +22,7 @@ export default function SecondaryOffer() {
               <div className="mt-4 space-y-2 text-sm leading-relaxed text-ink-muted">
                 <p>
                   <span className="text-ink">Desenvolvimento:</span> a partir de{" "}
-                  <span className="font-mono text-ink">R$ 800</span>
+                  <span className="font-mono text-ink">{PRICING.institucionalFrom}</span>
                   <br />
                   <span className="text-xs">
                     (valor final depende de páginas, integrações e personalização
@@ -30,8 +30,8 @@ export default function SecondaryOffer() {
                   </span>
                 </p>
                 <p>
-                  <span className="text-ink">Manutenção mensal:</span>{" "}
-                  <span className="font-mono text-ink">R$ 250/mês</span>
+                  <span className="text-ink">Manutenção mensal:</span> a partir de{" "}
+                  <span className="font-mono text-ink">{PRICING.institucionalMonthly}</span>
                   <br />
                   <span className="text-xs">
                     (hospedagem + 1 atualização de conteúdo/mês + suporte técnico)

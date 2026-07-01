@@ -1,6 +1,6 @@
 import { MessageCircle, Instagram } from "lucide-react";
 import Logo from "./Logo";
-import { waLink, WA_MESSAGES, INSTAGRAM_URL } from "@/lib/config";
+import { waLink, WA_MESSAGES, INSTAGRAM_URL, PROMO_SLOTS } from "@/lib/config";
 
 export default function Footer() {
   return (
@@ -37,12 +37,13 @@ export default function Footer() {
           </nav>
         </div>
 
-        {/* PS de reforço */}
-        <div className="mt-10 rounded-xl border border-edge bg-obsidian/50 p-4">
+        {/* PS de reforço — agrupado por fundo, sem borda (consistente com o
+            padrão de agrupamento interno adotado na Offer) */}
+        <div className="mt-10 rounded-xl bg-obsidian/50 p-4">
           <p className="text-pretty text-sm leading-relaxed text-ink-muted">
-            <span className="font-semibold text-ink">PS:</span> o preço de R$500 é
-            de lançamento. Quando as primeiras vagas fecharem, volta ao valor
-            normal.
+            <span className="font-semibold text-ink">PS:</span> o preço de R$497 é
+            de lançamento — restam {PROMO_SLOTS.left} das {PROMO_SLOTS.total}{" "}
+            vagas. Quando fecharem, volta ao valor normal.
           </p>
         </div>
 
