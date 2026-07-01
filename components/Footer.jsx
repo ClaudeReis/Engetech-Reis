@@ -1,6 +1,12 @@
-import { MessageCircle, Instagram } from "lucide-react";
+import { MessageCircle, Instagram, Mail } from "lucide-react";
 import Logo from "./Logo";
-import { waLink, WA_MESSAGES, INSTAGRAM_URL, PROMO_SLOTS } from "@/lib/config";
+import {
+  waLink,
+  WA_MESSAGES,
+  INSTAGRAM_URL,
+  CONTACT_EMAIL,
+  PROMO_SLOTS,
+} from "@/lib/config";
 
 export default function Footer() {
   return (
@@ -33,6 +39,13 @@ export default function Footer() {
             >
               <Instagram size={16} aria-hidden="true" />
               Instagram
+            </a>
+            <a
+              href={`mailto:${CONTACT_EMAIL}`}
+              className="inline-flex min-h-[44px] items-center gap-2.5 rounded-md text-sm text-ink-muted transition-colors hover:text-brand-cyan focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-carbon"
+            >
+              <Mail size={16} aria-hidden="true" />
+              {CONTACT_EMAIL}
             </a>
           </nav>
         </div>

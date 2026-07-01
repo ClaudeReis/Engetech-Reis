@@ -3,6 +3,7 @@ import {
   SITE_URL,
   WHATSAPP_NUMBER,
   INSTAGRAM_URL,
+  CONTACT_EMAIL,
 } from "@/lib/config";
 
 // Dados estruturados (schema.org) renderizados como JSON-LD.
@@ -29,6 +30,7 @@ const businessLd = {
     addressCountry: "BR",
   },
   telephone: `+${WHATSAPP_NUMBER}`,
+  email: CONTACT_EMAIL,
   priceRange: "$$",
   sameAs: [INSTAGRAM_URL],
   founder: { "@type": "Person", name: "Jonathan Reis" },
