@@ -63,6 +63,36 @@ diretório de publicação `out`).
 
 ---
 
+## Opção 4 — Hostgator (hospedagem em uso — domínio engetechreis.com.br)
+
+Hospedagem compartilhada cPanel. O site é 100% estático, então basta subir o
+conteúdo da pasta `out/` — não precisa de Node rodando no servidor.
+
+1. **Domínio**: registre `engetechreis.com.br` pelo próprio painel da Hostgator
+   (Meu Painel → Domínios → Registrar Domínio) ou pelo Registro.br apontando
+   os nameservers pra Hostgator depois. Se comprado direto na Hostgator, o DNS
+   já vem apontado automaticamente pro seu plano de hospedagem — só aguardar
+   propagação (algumas horas).
+2. **Build local**: `npm run build` gera `out/` (sem `basePath`, pronto pra
+   raiz do domínio).
+3. **Upload**: cPanel → **Gerenciador de Arquivos** → pasta `public_html/`.
+   Apague o `index.html` padrão da Hostgator se existir, e envie **todo o
+   conteúdo de dentro de `out/`** (não a pasta `out` em si — os arquivos soltos
+   `index.html`, `_next/`, `robots.txt`, `sitemap.xml`, `og.png` etc. direto
+   dentro de `public_html/`). Alternativa: subir via FTP (dados em
+   cPanel → Contas FTP).
+4. **SSL**: cPanel → **SSL/TLS Status** → ativar **AutoSSL** (Let's Encrypt
+   gratuito da Hostgator) pro domínio e o `www`. Sem isso o site abre sem
+   cadeado.
+5. **www vs raiz**: escolha um canônico (aqui está configurado sem `www`,
+   `https://engetechreis.com.br`) e crie um redirect do outro pra ele em
+   cPanel → **Redirects**, pra evitar conteúdo duplicado no Google.
+6. Depois do ar, rode a skill `google-indexar` pra verificar propriedade no
+   Search Console e enviar o sitemap novo (o antigo, do GitHub Pages, não
+   serve mais).
+
+---
+
 ## Antes de publicar — checklist de conteúdo (busque por `TODO`)
 - Logo oficial em `public/logo.png` (hoje é um SVG placeholder).
 - `@` real do Instagram em `lib/config.js`.
