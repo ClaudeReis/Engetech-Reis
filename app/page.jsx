@@ -14,6 +14,7 @@ import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 import StickyCTA from "@/components/StickyCTA";
+import ChatBot from "@/components/ChatBot";
 
 export default function Home() {
   return (
@@ -63,6 +64,9 @@ export default function Home() {
 
       {/* Barra de CTA fixa (mobile) */}
       <StickyCTA />
+
+      {/* Assistente de qualificação — demo viva do chatbot que vendemos */}
+      <ChatBot />
     </>
   );
 }
