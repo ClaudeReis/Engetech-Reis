@@ -151,7 +151,7 @@ export default function Projetos() {
   const small = PROJECTS.filter((p) => p.size === "small");
 
   return (
-    <section className="section-pad section-tint">
+    <section id="projetos" className="section-pad section-tint">
       <div className="section-wrap">
         {/* Heading próprio — maior que SectionHeading padrão para dar peso à seção */}
         <Reveal>

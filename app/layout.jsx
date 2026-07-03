@@ -1,7 +1,8 @@
 import "./globals.css";
+import Script from "next/script";
 import { Space_Grotesk, Sora, JetBrains_Mono } from "next/font/google";
 import JsonLd from "@/components/JsonLd";
-import { SITE_URL } from "@/lib/config";
+import { SITE_URL, GA_MEASUREMENT_ID } from "@/lib/config";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -80,28 +81,6 @@ export default function RootLayout({ children }) {
       className={`${spaceGrotesk.variable} ${sora.variable} ${jetBrains.variable}`}
     >
       <head>
-        {/* ================================================================
-            TRACKING — inserir os scripts reais antes de ir para produção.
-
-            META PIXEL: cole aqui o snippet base do Pixel (com seu PIXEL_ID).
-            <Script id="meta-pixel" strategy="afterInteractive">{`
-              !function(f,b,e,v,n,t,s){...}(...);
-              fbq('init', 'SEU_PIXEL_ID');
-              fbq('track', 'PageView');
-            `}</Script>
-
-            GA4: cole aqui o gtag.js (com seu MEASUREMENT_ID).
-            <Script src="https://www.googletagmanager.com/gtag/js?id=G-XXXX" />
-            <Script id="ga4">{`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-XXXX');
-            `}</Script>
-
-            O evento de conversão do CTA principal é disparado em
-            lib/config.js -> trackConversion().
-        ================================================================ */}
         {/* Sem JavaScript, o IntersectionObserver não roda — garante que o
             conteúdo do fade-in apareça mesmo assim. */}
         <noscript>
@@ -111,7 +90,28 @@ export default function RootLayout({ children }) {
         {/* Dados estruturados: negócio + FAQ (rich results no Google) */}
         <JsonLd />
       </head>
-      <body>{children}</body>
+      <body>
+        {/* ================================================================
+            GOOGLE ANALYTICS 4 — gtag.js (ID em lib/config.js).
+            O evento de conversão do CTA (WhatsApp) é disparado em
+            lib/config.js -> trackConversion() como "generate_lead".
+
+            META PIXEL: quando houver Pixel ID, adicionar aqui o snippet base
+            e reativar a linha window.fbq em trackConversion().
+        ================================================================ */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-init" strategy="afterInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${GA_MEASUREMENT_ID}');
+        `}</Script>
+
+        {children}
+      </body>
     </html>
   );
 }

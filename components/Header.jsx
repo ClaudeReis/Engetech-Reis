@@ -29,8 +29,29 @@ export default function Header() {
           aria-label="EngeTech Reis — início"
           className="rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-obsidian"
         >
-          <Logo />
+          <Logo withWordmark={false} size={38} />
         </a>
+
+        {/* Navegação por âncoras — só desktop (no mobile o CTA manda) */}
+        <nav
+          aria-label="Navegação principal"
+          className="hidden items-center gap-7 md:flex"
+        >
+          {[
+            { label: "Serviços", href: "#oferta" },
+            { label: "Projetos", href: "#projetos" },
+            { label: "FAQ", href: "#faq" },
+          ].map(({ label, href }) => (
+            <a
+              key={href}
+              href={href}
+              className="rounded font-mono text-xs uppercase tracking-wider text-ink-muted transition-colors hover:text-brand-cyan focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-obsidian"
+            >
+              {label}
+            </a>
+          ))}
+        </nav>
+
         <a
           href={waLink(WA_MESSAGES.hero)}
           target="_blank"

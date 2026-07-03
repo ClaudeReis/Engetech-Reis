@@ -5,6 +5,8 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    /* Compensa o header fixo (h-16 = 64px) ao pular para âncoras */
+    scroll-padding-top: 5rem;
   }
 
   body {
