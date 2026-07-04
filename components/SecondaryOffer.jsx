@@ -38,6 +38,14 @@ export default function SecondaryOffer() {
                   </span>
                 </p>
               </div>
+
+              <a
+                href="/site-institucional/"
+                className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-blue transition-colors hover:text-brand-blue/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2 focus-visible:ring-offset-carbon rounded"
+              >
+                Ver detalhes do site institucional
+                <ArrowRight size={15} aria-hidden="true" />
+              </a>
             </div>
 
             <CTAButton

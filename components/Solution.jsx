@@ -1,4 +1,4 @@
-import { Globe, Bot, Check } from "lucide-react";
+import { Globe, Bot, Check, ArrowRight } from "lucide-react";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 
@@ -9,6 +9,7 @@ const SOLUTIONS = [
     title: "Landing Page profissional",
     text: "Uma página otimizada que aparece no Google, passa credibilidade e transforma visitante em contato ou venda. Sem depender de postagem, stories ou alcance orgânico.",
     points: ["Aparece no Google", "Passa credibilidade", "Converte visitante em contato"],
+    href: "/criar-landing-page/",
   },
   {
     icon: Bot,
@@ -16,17 +17,18 @@ const SOLUTIONS = [
     title: "Chatbot para Instagram",
     text: "Automação inteligente que responde dúvidas frequentes, qualifica leads e direciona pro WhatsApp ou agenda automaticamente. Seu Instagram vira um time de atendimento 24h.",
     points: ["Responde na hora", "Qualifica leads", "Direciona pro WhatsApp/agenda"],
+    href: "/chatbot-instagram/",
   },
 ];
 
 export default function Solution() {
   return (
-    <section className="section-pad section-tint">
+    <section id="servicos" className="section-pad section-tint">
       <div className="section-wrap">
         <SectionHeading title="Duas peças que trabalham juntas pelo seu negócio" />
 
         <div className="mt-10 grid gap-5 md:grid-cols-2">
-          {SOLUTIONS.map(({ icon: Icon, tag, title, text, points }, i) => (
+          {SOLUTIONS.map(({ icon: Icon, tag, title, text, points, href }, i) => (
             <Reveal key={title} delay={i * 100}>
               <article className="card-base accent-top group flex h-full flex-col p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand-cyan/40 hover:shadow-glow active:scale-[0.99] sm:p-7">
                 <div className="flex items-center gap-3">
@@ -53,6 +55,14 @@ export default function Solution() {
                     </li>
                   ))}
                 </ul>
+
+                <a
+                  href={href}
+                  className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-cyan transition-colors hover:text-brand-cyan/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-carbon rounded"
+                >
+                  Saiba mais
+                  <ArrowRight size={15} aria-hidden="true" />
+                </a>
               </article>
             </Reveal>
           ))}
