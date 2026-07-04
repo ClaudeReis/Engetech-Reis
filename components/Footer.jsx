@@ -28,8 +28,8 @@ export default function Footer() {
             <a href="/site-institucional/" className="text-sm text-ink-muted transition-colors hover:text-brand-cyan focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-carbon rounded">
               Site Institucional
             </a>
-            <a href="/chatbot-instagram/" className="text-sm text-ink-muted transition-colors hover:text-brand-cyan focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-carbon rounded">
-              Chatbot para Instagram
+            <a href="/chatbot-para-site/" className="text-sm text-ink-muted transition-colors hover:text-brand-cyan focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-carbon rounded">
+              Chatbot para Site
             </a>
           </nav>
 

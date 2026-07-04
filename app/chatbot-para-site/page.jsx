@@ -2,12 +2,12 @@ import ServicePage from "@/components/ServicePage";
 import { getServico } from "@/lib/servicos";
 import { SITE_URL } from "@/lib/config";
 
-const servico = getServico("chatbot-instagram");
+const servico = getServico("chatbot-para-site");
 
 export const metadata = {
   title: servico.titleTag,
   description: servico.metaDescription,
-  keywords: [servico.keyword, "automação de atendimento", "Rio de Janeiro", "EngeTech Reis"],
+  keywords: [servico.keyword, "chatbot atendimento", "Rio de Janeiro", "EngeTech Reis"],
   alternates: { canonical: `/${servico.slug}/` },
   openGraph: {
     title: servico.titleTag,

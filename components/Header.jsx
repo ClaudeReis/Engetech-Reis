@@ -40,7 +40,7 @@ export default function Header() {
           {[
             { label: "Landing Pages", href: "/criar-landing-page/" },
             { label: "Sites", href: "/site-institucional/" },
-            { label: "Chatbot", href: "/chatbot-instagram/" },
+            { label: "Chatbot", href: "/chatbot-para-site/" },
           ].map(({ label, href }) => (
             <a
               key={href}
