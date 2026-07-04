@@ -1,9 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { MessageCircle, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import Logo from "./Logo";
-import { waLink, WA_MESSAGES } from "@/lib/config";
 
 const SECTIONS = [
   { label: "Serviços", href: "#servicos" },
@@ -44,7 +43,16 @@ export default function Header() {
       }`}
     >
       <div className="section-wrap flex h-16 items-center justify-between">
-        {/* Hambúrguer — canto esquerdo */}
+        {/* Logo — canto esquerdo (home) */}
+        <a
+          href="/"
+          aria-label="EngeTech Reis — início"
+          className="rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-obsidian"
+        >
+          <Logo withWordmark={false} size={38} />
+        </a>
+
+        {/* Hambúrguer — canto direito */}
         <button
           onClick={() => setMenuOpen((v) => !v)}
           aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
@@ -54,28 +62,6 @@ export default function Header() {
           {menuOpen ? <X size={18} /> : <Menu size={18} />}
           <span>Menu</span>
         </button>
-
-        {/* Logo + CTA — canto direito */}
-        <div className="flex items-center gap-3">
-          <a
-            href={waLink(WA_MESSAGES.hero)}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex min-h-[44px] items-center gap-2 rounded-lg border border-edge bg-carbon/60 px-3.5 py-2 font-mono text-xs uppercase tracking-wider text-ink transition-colors hover:border-brand-cyan/60 hover:text-brand-cyan focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-obsidian"
-            aria-label="Falar no WhatsApp"
-          >
-            <MessageCircle size={15} aria-hidden="true" />
-            <span className="hidden sm:inline">Falar agora</span>
-          </a>
-
-          <a
-            href="/"
-            aria-label="EngeTech Reis — início"
-            className="rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-obsidian"
-          >
-            <Logo withWordmark={false} size={38} />
-          </a>
-        </div>
       </div>
 
       {/* Dropdown — seções + páginas de serviço */}
