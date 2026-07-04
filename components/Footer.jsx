@@ -20,6 +20,19 @@ export default function Footer() {
             </p>
           </div>
 
+          <nav aria-label="Serviços" className="flex flex-col gap-3">
+            <p className="font-mono text-xs uppercase tracking-wider text-ink-muted/60">Serviços</p>
+            <a href="/criar-landing-page/" className="text-sm text-ink-muted transition-colors hover:text-brand-cyan focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-carbon rounded">
+              Landing Page profissional
+            </a>
+            <a href="/site-institucional/" className="text-sm text-ink-muted transition-colors hover:text-brand-cyan focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-carbon rounded">
+              Site Institucional
+            </a>
+            <a href="/chatbot-instagram/" className="text-sm text-ink-muted transition-colors hover:text-brand-cyan focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-carbon rounded">
+              Chatbot para Instagram
+            </a>
+          </nav>
+
           <nav aria-label="Contato" className="flex flex-col gap-3">
             <a
               href={waLink(WA_MESSAGES.final)}
