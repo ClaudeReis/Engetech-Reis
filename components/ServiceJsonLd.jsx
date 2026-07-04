@@ -26,7 +26,7 @@ export default function ServiceJsonLd({ servico }) {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Início", item: `${SITE_URL}/` },
-      { "@type": "ListItem", position: 2, name: "Serviços", item: `${SITE_URL}/#servicos` },
+      { "@type": "ListItem", position: 2, name: "Serviços", item: `${SITE_URL}/` },
       { "@type": "ListItem", position: 3, name: servico.breadcrumbLabel, item: pageUrl },
     ],
   };

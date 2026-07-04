@@ -32,7 +32,7 @@ export default function Header() {
           <Logo withWordmark={false} size={38} />
         </a>
 
-        {/* Navegação por âncoras — só desktop (no mobile o CTA manda) */}
+        {/* Nav links para páginas de serviço — só desktop (no mobile o CTA manda) */}
         <nav
           aria-label="Navegação principal"
           className="hidden items-center gap-7 md:flex"
