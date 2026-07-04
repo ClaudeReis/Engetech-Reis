@@ -25,7 +25,7 @@ export default function Header() {
     >
       <div className="section-wrap flex h-16 items-center justify-between">
         <a
-          href="#topo"
+          href="/"
           aria-label="EngeTech Reis — início"
           className="rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-obsidian"
         >
@@ -38,9 +38,9 @@ export default function Header() {
           className="hidden items-center gap-7 md:flex"
         >
           {[
-            { label: "Serviços", href: "#oferta" },
-            { label: "Projetos", href: "#projetos" },
-            { label: "FAQ", href: "#faq" },
+            { label: "Landing Pages", href: "/criar-landing-page/" },
+            { label: "Sites", href: "/site-institucional/" },
+            { label: "Chatbot", href: "/chatbot-instagram/" },
           ].map(({ label, href }) => (
             <a
               key={href}
