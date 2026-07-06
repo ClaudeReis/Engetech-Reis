@@ -1,11 +1,16 @@
 import { ChevronRight } from "lucide-react";
 
 /**
- * Trilha de navegação: Início › Serviços › [label atual].
- * "Serviços" aponta pra seção #servicos da home. O último item é a página
- * atual (sem link). O BreadcrumbList (JSON-LD) fica em ServiceJsonLd.
+ * Trilha de navegação: Início › [seção] › [label atual].
+ * A seção intermediária é "Serviços" por padrão (páginas de serviço); as
+ * páginas de case passam { label: "Projetos", href: "/projetos/" }. O último
+ * item é a página atual (sem link). O BreadcrumbList (JSON-LD) fica em
+ * ServiceJsonLd / CaseJsonLd.
  */
-export default function Breadcrumb({ label }) {
+export default function Breadcrumb({
+  label,
+  section = { label: "Serviços", href: "/#servicos" },
+}) {
   const linkCls =
     "rounded text-ink-muted transition-colors hover:text-brand-cyan focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-obsidian";
   return (
@@ -16,7 +21,7 @@ export default function Breadcrumb({ label }) {
         </li>
         <li aria-hidden="true"><ChevronRight size={13} className="text-edge" /></li>
         <li>
-          <a href="/#servicos" className={linkCls}>Serviços</a>
+          <a href={section.href} className={linkCls}>{section.label}</a>
         </li>
         <li aria-hidden="true"><ChevronRight size={13} className="text-edge" /></li>
         <li aria-current="page" className="text-ink">{label}</li>

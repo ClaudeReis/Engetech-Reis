@@ -58,11 +58,19 @@ export default function Projetos() {
           )}
         </div>
 
-        {/* Rodapé da seção — fecha o espaço e reforça a mensagem */}
+        {/* Rodapé da seção — fecha o espaço e leva pro hub de cases */}
         <Reveal delay={120}>
-          <p className="mt-8 font-mono text-xs uppercase tracking-[0.18em] text-ink-muted/40">
-            {PROJECTS.length} projetos · todos do zero · nenhum template
-          </p>
+          <div className="mt-8 flex flex-wrap items-center justify-between gap-3">
+            <p className="font-mono text-xs uppercase tracking-[0.18em] text-ink-muted/40">
+              {PROJECTS.length} projetos · todos do zero · nenhum template
+            </p>
+            <a
+              href="/projetos/"
+              className="inline-flex items-center gap-1.5 rounded font-mono text-xs uppercase tracking-wider text-brand-cyan transition-colors hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-obsidian"
+            >
+              Ver todos os cases →
+            </a>
+          </div>
         </Reveal>
       </div>
     </section>

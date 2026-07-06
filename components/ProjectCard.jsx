@@ -1,3 +1,4 @@
+import { ArrowRight } from "lucide-react";
 import Reveal from "./Reveal";
 import { asset } from "@/lib/asset";
 
@@ -15,10 +16,18 @@ function BrowserFrame({ url }) {
 }
 
 export default function ProjectCard({ project, screenshotHeight = "h-44", fadeHeight = "h-10" }) {
-  const { name, role, tags, location, screenshot, url, live } = project;
+  const { id, name, role, tags, location, screenshot, url, live } = project;
 
   return (
     <Reveal className="h-full">
+      {/* O card inteiro linka pro case DENTRO do domínio (/projetos/<id>/) —
+          conteúdo indexável próprio, em vez de só apontar pro site do cliente
+          (diagnóstico SEO 2026-07). */}
+      <a
+        href={`/projetos/${id}/`}
+        aria-label={`Ver o case do projeto ${name}`}
+        className="block h-full rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-obsidian"
+      >
       <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-edge bg-carbon transition-all duration-300 hover:border-brand-cyan/40 hover:shadow-glow">
         <BrowserFrame url={url} />
 
@@ -78,11 +87,21 @@ export default function ProjectCard({ project, screenshotHeight = "h-44", fadeHe
         </div>
 
         {/* Info */}
-        <div className="p-4">
-          <p className="font-heading text-sm font-semibold leading-tight text-ink">{name}</p>
-          <p className="mt-0.5 font-mono text-[11px] text-ink-muted/60">{role} · {location}</p>
+        <div className="flex items-end justify-between gap-3 p-4">
+          <div>
+            <p className="font-heading text-sm font-semibold leading-tight text-ink">{name}</p>
+            <p className="mt-0.5 font-mono text-[11px] text-ink-muted/60">{role} · {location}</p>
+          </div>
+          <span
+            className="inline-flex shrink-0 items-center gap-1 font-mono text-[10px] uppercase tracking-wider text-ink-muted/50 transition-colors group-hover:text-brand-cyan"
+            aria-hidden="true"
+          >
+            Ver case
+            <ArrowRight size={12} />
+          </span>
         </div>
       </article>
+      </a>
     </Reveal>
   );
 }

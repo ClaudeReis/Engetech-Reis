@@ -41,7 +41,7 @@ export default function Hero({
         <Reveal>
           <p className="eyebrow mb-5">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-brand-cyan shadow-glow" />
-            Agência de engenharia digital • Rio de Janeiro
+            Site e chatbot para negócio local • Rio de Janeiro
           </p>
         </Reveal>
 
@@ -53,8 +53,9 @@ export default function Hero({
 
         <Reveal delay={160}>
           <p className="mt-6 max-w-2xl text-pretty text-base leading-relaxed text-ink-muted sm:text-lg">
-            A EngeTech Reis transforma negócios locais em negócios que{" "}
-            <span className="text-ink">aparecem, respondem e vendem</span> — sem
+            A EngeTech Reis cria site, landing page e chatbot para negócio
+            local no Rio de Janeiro — pra você{" "}
+            <span className="text-ink">aparecer, responder e vender</span> sem
             depender só das redes sociais.
           </p>
         </Reveal>

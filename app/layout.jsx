@@ -27,7 +27,9 @@ const jetBrains = JetBrains_Mono({
 
 export const metadata = {
   metadataBase: new URL(`${SITE_URL}/`),
-  title: "EngeTech Reis — Presença digital que aparece, responde e vende",
+  // Termo de busca primeiro, marca no final — casa com a intenção de quem
+  // pesquisa o serviço (diagnóstico SEO 2026-07).
+  title: "Site e Chatbot para Negócio Local no Rio de Janeiro | EngeTech Reis",
   description:
     "Landing pages, sites e chatbots para Instagram que colocam seu negócio no Google e respondem na hora. Presença digital para negócios no Rio de Janeiro.",
   keywords: [
