@@ -28,8 +28,9 @@ const jetBrains = JetBrains_Mono({
 export const metadata = {
   metadataBase: new URL(`${SITE_URL}/`),
   // Termo de busca primeiro, marca no final — casa com a intenção de quem
-  // pesquisa o serviço (diagnóstico SEO 2026-07).
-  title: "Site e Chatbot para Negócio Local no Rio de Janeiro | EngeTech Reis",
+  // pesquisa o serviço (diagnóstico SEO 2026-07). Regra: título completo,
+  // incluindo a marca, com no máximo ~60 caracteres (Google corta depois).
+  title: "Criação de Site e Chatbot no Rio de Janeiro | EngeTech Reis",
   description:
     "Landing pages, sites e chatbots para Instagram que colocam seu negócio no Google e respondem na hora. Presença digital para negócios no Rio de Janeiro.",
   keywords: [
