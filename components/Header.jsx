@@ -16,6 +16,7 @@ const SERVICE_PAGES = [
   { label: "Sites", href: "/site-institucional/" },
   { label: "Chatbot", href: "/chatbot-para-site/" },
   { label: "Portfólio", href: "/projetos/" },
+  { label: "Blog", href: "/blog/" },
 ];
 
 export default function Header() {
