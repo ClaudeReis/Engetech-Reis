@@ -1,4 +1,4 @@
-import { Star, Quote } from "lucide-react";
+import { Star, Quote, ArrowRight } from "lucide-react";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 import { asset } from "@/lib/asset";
@@ -115,6 +115,13 @@ export default function SocialProof() {
                       automação que saem daqui são feitos por mim — do briefing
                       ao ar. Sem equipe escondida, sem terceirização.
                     </p>
+                    <a
+                      href="/sobre/"
+                      className="mt-5 inline-flex items-center gap-1.5 self-start rounded text-sm font-semibold text-brand-cyan transition-colors hover:text-brand-cyan/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-carbon"
+                    >
+                      Conheça quem constrói
+                      <ArrowRight size={15} aria-hidden="true" />
+                    </a>
                   </div>
                 </div>
               </div>

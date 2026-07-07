@@ -33,7 +33,7 @@ const businessLd = {
   email: CONTACT_EMAIL,
   priceRange: "$$",
   sameAs: [INSTAGRAM_URL],
-  founder: { "@type": "Person", name: "Jonathan Reis" },
+  founder: { "@id": `${SITE_URL}/#jonathan-reis` },
   knowsLanguage: "pt-BR",
   serviceType: [
     "Criação de landing page",

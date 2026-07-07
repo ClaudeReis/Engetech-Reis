@@ -17,6 +17,7 @@ const SERVICE_PAGES = [
   { label: "Chatbot", href: "/chatbot-para-site/" },
   { label: "Portfólio", href: "/projetos/" },
   { label: "Blog", href: "/blog/" },
+  { label: "Sobre", href: "/sobre/" },
 ];
 
 export default function Header() {

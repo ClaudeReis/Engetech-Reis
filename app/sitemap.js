@@ -27,6 +27,7 @@ export default function sitemap() {
 
   return [
     { url: `${SITE_URL}/`, changeFrequency: "monthly", priority: 1 },
+    { url: `${SITE_URL}/sobre/`, changeFrequency: "monthly", priority: 0.7 },
     ...servicos,
     { url: `${SITE_URL}/projetos/`, changeFrequency: "monthly", priority: 0.7 },
     ...cases,
