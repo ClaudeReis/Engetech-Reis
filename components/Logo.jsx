@@ -12,7 +12,7 @@ export default function Logo({ withWordmark = true, size = 40, className = "" })
   return (
     <span className={`inline-flex items-center gap-2.5 ${className}`}>
       <img
-        src={asset("/logo.png")}
+        src={asset("/logo.webp")}
         alt="EngeTech Reis"
         width={size}
         height={size}
