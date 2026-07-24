@@ -73,7 +73,7 @@ export default function Header() {
           aria-label="Navegação principal"
           className="border-t border-edge bg-obsidian/95 backdrop-blur-md"
         >
-          <p className="px-6 pt-4 pb-1 font-mono text-[10px] uppercase tracking-widest text-ink-muted/50">
+          <p className="px-6 pt-4 pb-1 font-mono text-[10px] uppercase tracking-widest text-ink-subtle">
             Nesta página
           </p>
           {SECTIONS.map(({ label, href }) => (
@@ -89,7 +89,7 @@ export default function Header() {
 
           <div className="mx-6 my-2 border-t border-edge" />
 
-          <p className="px-6 pt-1 pb-1 font-mono text-[10px] uppercase tracking-widest text-ink-muted/50">
+          <p className="px-6 pt-1 pb-1 font-mono text-[10px] uppercase tracking-widest text-ink-subtle">
             Serviços
           </p>
           {SERVICE_PAGES.map(({ label, href }) => (

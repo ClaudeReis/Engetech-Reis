@@ -86,7 +86,7 @@ export default function Page() {
                     <p className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest text-brand-cyan">
                       {p.category}
                       <span aria-hidden="true" className="text-edge">•</span>
-                      <span className="text-ink-muted/60">{formatDate(p.date)}</span>
+                      <span className="text-ink-subtle">{formatDate(p.date)}</span>
                     </p>
                     <h2 className="mt-3 text-balance font-heading text-lg font-semibold leading-snug text-ink">
                       {p.h1}

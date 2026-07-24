@@ -78,8 +78,8 @@ export default function SocialProof() {
         ) : (
           /* Founder block: foto + bio — largura cheia, alinhado à esquerda */
           <Reveal>
-            <div className="gradient-border mt-6">
-              <div className="overflow-hidden rounded-[calc(1rem-1px)] bg-carbon">
+            <div className="card-base mt-6 overflow-hidden">
+              <div className="overflow-hidden rounded-2xl bg-carbon">
                 <div className="flex flex-col sm:flex-row">
                   {/* Foto — rosto está na metade direita da imagem */}
                   <div className="relative h-72 w-full shrink-0 sm:h-auto sm:w-72 lg:w-96">

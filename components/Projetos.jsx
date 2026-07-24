@@ -1,4 +1,5 @@
 import Reveal from "./Reveal";
+import SectionHeading from "./SectionHeading";
 import ProjectCard from "./ProjectCard";
 import { PROJECTS } from "@/lib/projetos";
 
@@ -10,17 +11,11 @@ export default function Projetos() {
   return (
     <section id="projetos" className="section-pad section-tint">
       <div className="section-wrap">
-        {/* Heading próprio — maior que SectionHeading padrão para dar peso à seção */}
-        <Reveal>
-          <h2 className="text-balance font-heading text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
-            Do briefing ao ar.
-          </h2>
-        </Reveal>
-        <Reveal delay={80}>
-          <p className="mt-4 max-w-[55ch] text-pretty text-base leading-relaxed text-ink-muted">
-            Cada projeto construído do zero — identidade própria, código limpo, sem template.
-          </p>
-        </Reveal>
+        <SectionHeading
+          size="pillar"
+          title="Do briefing ao ar."
+          subtitle="Cada projeto construído do zero — identidade própria, código limpo, sem template."
+        />
 
         <div className="mt-10 space-y-4">
           {/* Linha 1: featured largo + 2 médios à direita */}
@@ -61,7 +56,7 @@ export default function Projetos() {
         {/* Rodapé da seção — fecha o espaço e leva pro hub de cases */}
         <Reveal delay={120}>
           <div className="mt-8 flex flex-wrap items-center justify-between gap-3">
-            <p className="font-mono text-xs uppercase tracking-[0.18em] text-ink-muted/40">
+            <p className="font-mono text-xs uppercase tracking-[0.18em] text-ink-subtle">
               {PROJECTS.length} projetos · todos do zero · nenhum template
             </p>
             <a

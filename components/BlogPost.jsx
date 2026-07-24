@@ -201,7 +201,7 @@ export default function BlogPost({ post }) {
         {outros.length > 0 && (
           <section className="section-pad section-tint">
             <div className="section-wrap">
-              <SectionHeading title="Continue lendo" />
+              <SectionHeading title="Continue lendo" size="support" />
               <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {outros.map((p) => (
                   <a

@@ -139,7 +139,7 @@ export default function ServicePage({ servico }) {
         {/* Outros serviços — cruza os spokes */}
         <section className="pb-4">
           <div className="section-wrap">
-            <p className="font-mono text-xs uppercase tracking-[0.16em] text-ink-muted/60">
+            <p className="font-mono text-xs uppercase tracking-[0.16em] text-ink-subtle">
               Também fazemos
             </p>
             <div className="mt-4 flex flex-wrap gap-3">

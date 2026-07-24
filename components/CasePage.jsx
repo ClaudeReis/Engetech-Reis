@@ -111,7 +111,7 @@ export default function CasePage({ project }) {
                   <span className="h-2 w-2 rounded-full bg-edge" aria-hidden="true" />
                   <span className="h-2 w-2 rounded-full bg-edge" aria-hidden="true" />
                   <span className="h-2 w-2 rounded-full bg-edge" aria-hidden="true" />
-                  <span className="ml-2 flex h-4 flex-1 items-center overflow-hidden rounded-sm bg-edge/40 px-2 font-mono text-[10px] tracking-wide text-ink-muted/50">
+                  <span className="ml-2 flex h-4 flex-1 items-center overflow-hidden rounded-sm bg-edge/40 px-2 font-mono text-[10px] tracking-wide text-ink-subtle">
                     {project.url}
                   </span>
                 </div>
@@ -186,7 +186,7 @@ export default function CasePage({ project }) {
         {/* Outros projetos — internal linking entre cases */}
         <section className="section-pad">
           <div className="section-wrap">
-            <SectionHeading title="Outros projetos" />
+            <SectionHeading title="Outros projetos" size="support" />
             <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {outros.map((p) => (
                 <ProjectCard key={p.id} project={p} screenshotHeight="h-44" fadeHeight="h-8" />

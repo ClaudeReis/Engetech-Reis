@@ -79,21 +79,27 @@
     @apply rounded-2xl border border-edge bg-carbon;
   }
 
+  /* Card de seção-pilar: elevado acima do plano dos cards comuns.
+     A separação vem da sombra projetada + do salto de superfície
+     (carbon → raised), não de mais uma borda. */
+  .card-pillar {
+    @apply relative overflow-hidden rounded-[20px] border border-hairline-strong bg-raised shadow-raise;
+  }
+
+  /* Caixa afundada, para agrupar sub-informação DENTRO de um card.
+     Um nível abaixo da superfície que a contém. */
+  .card-sunken {
+    @apply rounded-xl border border-hairline bg-sunken;
+  }
+
   /* Texto com gradiente da marca */
   .text-gradient {
     @apply bg-brand-gradient bg-clip-text text-transparent;
   }
 
-  /* Borda em gradiente (wrapper) */
-  .gradient-border {
-    position: relative;
-    border-radius: 1rem;
-    background: linear-gradient(135deg, #00d9ff, #2a72ff 45%, #7c4dff);
-    padding: 1px;
-  }
-  .gradient-border > * {
-    border-radius: calc(1rem - 1px);
-  }
+  /* .gradient-border foi aposentada: a borda em gradiente estava em cards de
+     apoio (fundador, urgência) e gritava mais alto que a seção-pilar. A ênfase
+     agora vem da escada de superfícies — ver .card-pillar. */
 }
 
 @layer utilities {

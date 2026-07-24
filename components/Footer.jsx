@@ -21,7 +21,7 @@ export default function Footer() {
           </div>
 
           <nav aria-label="Serviços" className="flex flex-col gap-3">
-            <p className="font-mono text-xs uppercase tracking-wider text-ink-muted/60">Serviços</p>
+            <p className="font-mono text-xs uppercase tracking-wider text-ink-subtle">Serviços</p>
             <a href="/criar-landing-page/" className="text-sm text-ink-muted transition-colors hover:text-brand-cyan focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-carbon rounded">
               Landing Page profissional
             </a>

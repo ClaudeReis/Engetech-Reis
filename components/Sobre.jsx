@@ -95,8 +95,8 @@ export default function Sobre() {
 
             {/* Card: foto + bio principal */}
             <Reveal delay={120}>
-              <div className="gradient-border mt-10">
-                <div className="overflow-hidden rounded-[calc(1rem-1px)] bg-carbon">
+              <div className="card-base mt-10 overflow-hidden">
+                <div className="overflow-hidden rounded-2xl bg-carbon">
                   <div className="flex flex-col sm:flex-row">
                     {/* Foto — rosto na metade direita da imagem */}
                     <div className="relative h-72 w-full shrink-0 sm:h-auto sm:w-72 lg:w-96">

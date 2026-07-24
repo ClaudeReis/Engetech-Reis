@@ -8,7 +8,7 @@ function BrowserFrame({ url }) {
       <span className="h-2 w-2 rounded-full bg-edge" aria-hidden="true" />
       <span className="h-2 w-2 rounded-full bg-edge" aria-hidden="true" />
       <span className="h-2 w-2 rounded-full bg-edge" aria-hidden="true" />
-      <span className="ml-2 flex h-3.5 flex-1 items-center overflow-hidden rounded-sm bg-edge/40 px-2 font-mono text-[9px] tracking-wide text-ink-muted/50">
+      <span className="ml-2 flex h-3.5 flex-1 items-center overflow-hidden rounded-sm bg-edge/40 px-2 font-mono text-[9px] tracking-wide text-ink-subtle">
         {url}
       </span>
     </div>
@@ -54,7 +54,7 @@ export default function ProjectCard({ project, screenshotHeight = "h-44", fadeHe
                 aria-hidden="true"
                 className="pointer-events-none absolute inset-0 bg-hud-grid bg-[size:28px_28px] opacity-[0.22]"
               />
-              <p className="relative font-mono text-[10px] uppercase tracking-[0.2em] text-ink-muted/40">
+              <p className="relative font-mono text-[10px] uppercase tracking-[0.2em] text-ink-subtle">
                 screenshot em breve
               </p>
             </div>
@@ -90,10 +90,10 @@ export default function ProjectCard({ project, screenshotHeight = "h-44", fadeHe
         <div className="flex items-end justify-between gap-3 p-4">
           <div>
             <p className="font-heading text-sm font-semibold leading-tight text-ink">{name}</p>
-            <p className="mt-0.5 font-mono text-[11px] text-ink-muted/60">{role} · {location}</p>
+            <p className="mt-0.5 font-mono text-[11px] text-ink-subtle">{role} · {location}</p>
           </div>
           <span
-            className="inline-flex shrink-0 items-center gap-1 font-mono text-[10px] uppercase tracking-wider text-ink-muted/50 transition-colors group-hover:text-brand-cyan"
+            className="inline-flex shrink-0 items-center gap-1 font-mono text-[10px] uppercase tracking-wider text-ink-subtle transition-colors group-hover:text-brand-cyan"
             aria-hidden="true"
           >
             Ver case

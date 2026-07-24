@@ -1,4 +1,4 @@
-import { Check, ArrowRight, Sparkles, Flame } from "lucide-react";
+import { ArrowRight, Flame } from "lucide-react";
 import CTAButton from "./CTAButton";
 import Reveal from "./Reveal";
 import { waLink, WA_MESSAGES, PRICING, PROMO_SLOTS } from "@/lib/config";
@@ -6,109 +6,133 @@ import { waLink, WA_MESSAGES, PRICING, PROMO_SLOTS } from "@/lib/config";
 const SETUP_ITEMS = PRICING.setupItems;
 const MONTHLY_ITEMS = PRICING.monthlyItems;
 
+/**
+ * Oferta principal — seção-pilar da página.
+ *
+ * O peso visual foi redistribuído para que a caixa de preço seja o foco e a
+ * lista de entregáveis seja apoio (antes as duas colunas competiam de igual
+ * para igual). A separação entre planos vem da escada de superfícies
+ * (raised → sunken), não de bordas empilhadas.
+ */
 export default function Offer() {
   return (
-    <section id="oferta" className="section-pad">
+    // Ritmo "wide": esta seção respira mais que as de apoio, para o preço
+    // chegar como um evento na página e não como mais um bloco.
+    <section id="oferta" className="py-20 sm:py-28 lg:py-32">
       <div className="section-wrap">
         <Reveal>
-          <div className="gradient-border shadow-glow">
-            <div className="relative rounded-2xl bg-carbon p-6 sm:p-8 lg:p-10">
-              {/* Cabeçalho — span total */}
-              <div className="flex flex-wrap items-center gap-2">
-                <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-cyan/40 bg-brand-cyan/10 px-3 py-1 font-mono text-[11px] uppercase tracking-wider text-brand-cyan">
-                  <Sparkles size={12} aria-hidden="true" />
-                  Oferta promocional de lançamento
-                </span>
-                {/* Escassez honesta — número real vindo do config (PROMO_SLOTS) */}
-                <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-violet/40 bg-brand-violet/10 px-3 py-1 font-mono text-[11px] uppercase tracking-wider text-brand-violet">
-                  <Flame size={12} aria-hidden="true" />
-                  {PROMO_SLOTS.left} de {PROMO_SLOTS.total} vagas disponíveis
-                </span>
-              </div>
-              <h2 className="mt-5 text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
-                Pacote{" "}
-                <span className="text-brand-cyan">Presença Digital Completa</span>
-              </h2>
+          {/* Padding menor no mobile: card-pillar e card-sunken se aninham, então
+              os paddings somam e comem a largura útil numa tela de 375px. */}
+          <div className="card-pillar accent-top p-6 sm:p-10 lg:p-12">
+            <p className="font-mono text-xs uppercase tracking-[0.18em] text-ink-subtle">
+              Oferta de lançamento
+            </p>
 
-              {/* Grid: detalhes (esq) + caixa de decisão (dir) */}
-              <div className="mt-8 grid gap-8 lg:grid-cols-2 lg:gap-12">
-                {/* Coluna esquerda — o que está incluído */}
-                <div>
-                  <p className="font-mono text-xs uppercase tracking-wider text-ink-muted">
-                    O que está incluído
+            <h2 className="mt-4 max-w-[16ch] text-balance text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl">
+              Pacote{" "}
+              <span className="bg-cta-gradient bg-clip-text text-transparent">
+                Presença Digital Completa
+              </span>
+            </h2>
+
+            <div className="mt-10 grid gap-8 lg:grid-cols-[1fr_0.85fr] lg:items-start lg:gap-12">
+              {/* Coluna esquerda — entregáveis (apoio) */}
+              <div>
+                <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-ink-subtle">
+                  O que está incluído
+                </p>
+                <ul className="mt-4">
+                  {SETUP_ITEMS.map(({ label, value }) => (
+                    <li
+                      key={label}
+                      className="flex items-baseline justify-between gap-5 border-b border-hairline py-3.5 last:border-b-0"
+                    >
+                      <span className="text-[15px] text-ink">{label}</span>
+                      <span className="shrink-0 font-mono text-[13px] tabular-nums text-ink-subtle line-through decoration-white/20">
+                        {value}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+
+                {/* Recorrência — afundada: lê como sub-informação do bloco */}
+                <div className="card-sunken mt-6 p-5 sm:p-6">
+                  <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-ink-subtle">
+                    Manutenção mensal
                   </p>
-                  <ul className="mt-4 space-y-3">
-                    {SETUP_ITEMS.map(({ label, value }) => (
-                      <li key={label} className="flex items-start justify-between gap-4">
-                        <span className="flex items-start gap-2.5 text-sm text-ink sm:text-base">
-                          <Check size={18} className="mt-0.5 shrink-0 text-brand-cyan" aria-hidden="true" />
-                          {label}
-                        </span>
-                        <span className="shrink-0 font-mono text-sm text-ink-muted line-through decoration-edge">
+                  <ul className="mt-3">
+                    {MONTHLY_ITEMS.map(({ label, value }) => (
+                      <li
+                        key={label}
+                        className="flex items-baseline justify-between gap-4 border-b border-hairline py-2.5 last:border-b-0"
+                      >
+                        <span className="text-sm text-ink-muted">{label}</span>
+                        <span className="shrink-0 font-mono text-[13px] tabular-nums text-ink-subtle">
                           {value}
                         </span>
                       </li>
                     ))}
                   </ul>
-
-                  {/* Recorrência — agrupada por fundo, sem borda (um nível de
-                      borda só dentro do card gradient-border) */}
-                  <div className="mt-6 rounded-xl bg-obsidian/60 p-5">
-                    <p className="font-mono text-xs uppercase tracking-wider text-ink-muted">
-                      Manutenção mensal
-                    </p>
-                    <ul className="mt-3 space-y-2.5">
-                      {MONTHLY_ITEMS.map(({ label, value }) => (
-                        <li key={label} className="flex items-start justify-between gap-3 text-sm">
-                          <span className="flex items-start gap-2 text-ink">
-                            <Check size={15} className="mt-0.5 shrink-0 text-brand-violet" aria-hidden="true" />
-                            {label}
-                          </span>
-                          <span className="shrink-0 font-mono text-ink-muted">{value}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    <div className="my-3 h-px bg-edge" />
-                    <p className="flex items-center justify-between text-sm">
-                      <span className="font-semibold text-ink">Total recorrência</span>
-                      <span className="font-mono font-semibold text-brand-cyan">{PRICING.monthly}</span>
-                    </p>
+                  <div className="mt-2 flex items-baseline justify-between gap-4 border-t border-hairline-strong pt-3.5">
+                    <span className="whitespace-nowrap text-sm font-semibold text-ink">
+                      Total recorrência
+                    </span>
+                    <span className="font-mono text-[15px] font-semibold tabular-nums text-ink">
+                      {PRICING.monthly}
+                    </span>
                   </div>
                 </div>
+              </div>
 
-                {/* Coluna direita — preço + ação (fundo agrupa; sem borda
-                    pra não competir com o gradient-border externo) */}
-                <div className="flex flex-col justify-center rounded-2xl bg-obsidian/40 p-6 sm:p-8">
-                  <p className="font-mono text-sm text-ink-muted">
-                    Valor total estimado:{" "}
-                    <span className="line-through decoration-edge">{PRICING.setupFull}</span>
-                  </p>
-                  <p className="mt-2 flex items-baseline gap-2">
-                    <span className="text-sm text-ink-muted">Hoje por</span>
-                    <span className="font-heading text-5xl font-bold text-brand-cyan sm:text-6xl">
-                      {PRICING.setupPromo}
-                    </span>
-                  </p>
-                  <p className="mt-1 font-mono text-xs text-ink-muted">setup único</p>
-                  {/* Mensalidade legível de cara — sem letra miúda, sem surpresa depois */}
-                  <p className="mt-3 text-sm leading-relaxed text-ink">
-                    + <span className="font-semibold text-brand-cyan">{PRICING.monthly}</span>{" "}
-                    de manutenção — chatbot ativo, hospedagem e atualizações
-                  </p>
+              {/* Coluna direita — preço + ação (o foco) */}
+              <div className="card-sunken p-5 sm:p-8">
+                {/* Escassez honesta — número real vindo do config (PROMO_SLOTS).
+                    Fica aqui, e não no topo da seção, para aparecer no ponto
+                    onde a decisão acontece. */}
+                <span className="inline-flex items-center gap-2 rounded-full border border-brand-cyan/35 bg-brand-cyan/[0.08] px-3 py-1.5 font-mono text-[11px] uppercase tracking-wider text-brand-cyan">
+                  <Flame size={12} aria-hidden="true" />
+                  {PROMO_SLOTS.left} de {PROMO_SLOTS.total} vagas
+                </span>
 
-                  <CTAButton
-                    href={waLink(WA_MESSAGES.offer)}
-                    track="oferta_principal"
-                    ariaLabel="Quero começar agora — abrir WhatsApp"
-                    className="mt-7 w-full"
-                  >
-                    Quero começar agora
-                    <ArrowRight size={18} aria-hidden="true" />
-                  </CTAButton>
-                  <p className="mt-4 text-center font-mono text-xs text-ink-muted">
-                    Contrato mínimo de 6 meses · Garantia de 7 dias
-                  </p>
-                </div>
+                <p className="mt-5 font-mono text-[13px] tabular-nums text-ink-subtle">
+                  De{" "}
+                  <span className="line-through decoration-white/25">
+                    {PRICING.setupFull}
+                  </span>{" "}
+                  por
+                </p>
+
+                <p className="mt-1.5 bg-cta-gradient bg-clip-text font-heading text-[56px] font-bold leading-[0.92] tracking-[-0.03em] tabular-nums text-transparent sm:text-7xl">
+                  {PRICING.setupPromo}
+                </p>
+
+                <p className="mt-2 font-mono text-[11px] uppercase tracking-[0.12em] text-ink-subtle">
+                  setup único
+                </p>
+
+                {/* Mensalidade legível de cara — sem letra miúda, sem surpresa depois */}
+                <p className="mt-5 border-t border-hairline pt-5 text-sm leading-relaxed text-ink-muted">
+                  +{" "}
+                  <span className="font-mono font-semibold tabular-nums text-ink">
+                    {PRICING.monthly}
+                  </span>{" "}
+                  de manutenção — chatbot ativo, hospedagem e atualizações
+                </p>
+
+                <CTAButton
+                  href={waLink(WA_MESSAGES.offer)}
+                  variant="cta"
+                  track="oferta_principal"
+                  ariaLabel="Quero começar agora — abrir WhatsApp"
+                  className="mt-6 w-full"
+                >
+                  Quero começar agora
+                  <ArrowRight size={18} aria-hidden="true" />
+                </CTAButton>
+
+                <p className="mt-4 text-center font-mono text-[11px] tracking-[0.03em] text-ink-subtle">
+                  Contrato mínimo de 6 meses · Garantia de 7 dias
+                </p>
               </div>
             </div>
           </div>
