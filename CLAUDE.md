@@ -41,3 +41,7 @@ npm run lint
 - Acessibilidade meta **WCAG AA**: contraste verificado, `prefers-reduced-motion`,
   foco visível, alvos de toque ≥44px.
 - Antes de `commit`/`push`, prefira gerar uma **prévia** para eu aprovar o visual.
+
+## Comunicação com o Claude
+- Não usar travessões (—) nas respostas de chat nem na copy do site.
+- Não usar emojis nas respostas de chat nem na copy do site.
