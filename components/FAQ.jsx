@@ -2,6 +2,20 @@ import Accordion from "./Accordion";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 
+// FAQPage com as MESMAS perguntas exibidas abaixo (regra do Google) — fica
+// aqui, e não no JsonLd global, porque só a home renderiza este componente.
+function faqJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: FAQS.map(({ q, a }) => ({
+      "@type": "Question",
+      name: q,
+      acceptedAnswer: { "@type": "Answer", text: a },
+    })),
+  };
+}
+
 export const FAQS = [
   {
     q: "Quanto tempo leva pra ficar pronto?",
@@ -9,7 +23,7 @@ export const FAQS = [
   },
   {
     q: "Funciona pra qualquer tipo de negócio?",
-    a: "Sim. Comércio local, clínica, salão, personal trainer, advogado, nutricionista — se você atende cliente, você precisa aparecer e responder rápido.",
+    a: "Sim. Comércio local, clínica, salão, personal trainer, advogado, nutricionista: se você atende cliente, você precisa aparecer e responder rápido.",
   },
   {
     q: "Preciso entender de tecnologia pra usar?",
@@ -29,17 +43,21 @@ export const FAQS = [
   },
   {
     q: "Qual a diferença entre Landing Page e site completo?",
-    a: "A Landing Page é uma página única, focada em converter — ideal pra começar rápido e com investimento baixo. O site institucional tem mais páginas e mais profundidade — investimento a partir de R$997, conforme a complexidade do projeto.",
+    a: "A Landing Page é uma página única, focada em converter, ideal pra começar rápido e com investimento baixo. O site institucional tem mais páginas e mais profundidade, com investimento a partir de R$997, conforme a complexidade do projeto.",
   },
   {
     q: "Por que o site não tem preço fixo?",
-    a: "Porque cada negócio precisa de algo diferente. Número de páginas, integrações e nível de personalização mudam o investimento. Por isso fazemos um orçamento sob consulta — sem custo escondido.",
+    a: "Porque cada negócio precisa de algo diferente. Número de páginas, integrações e nível de personalização mudam o investimento. Por isso fazemos um orçamento sob consulta, sem custo escondido.",
   },
 ];
 
 export default function FAQ() {
   return (
     <section id="faq" className="section-pad section-tint">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd()) }}
+      />
       <div className="section-wrap">
         <SectionHeading title="Ainda com dúvida? A gente responde." />
         <Reveal delay={120}>

@@ -1,4 +1,3 @@
-import { FAQS } from "./FAQ";
 import {
   SITE_URL,
   WHATSAPP_NUMBER,
@@ -6,12 +5,14 @@ import {
   CONTACT_EMAIL,
 } from "@/lib/config";
 
-// Dados estruturados (schema.org) renderizados como JSON-LD.
+// Dados estruturados (schema.org) renderizados globalmente (todas as páginas).
 // - ProfessionalService: identidade do negócio para o Google (knowledge graph,
 //   busca local). areaServed = Rio de Janeiro; sem endereço de rua (atendimento
 //   remoto/agendado), só a cidade.
-// - FAQPage: usa as MESMAS perguntas exibidas em <FAQ/>, então o schema bate
-//   com o conteúdo visível (regra do Google — nada de FAQ fantasma).
+// FAQPage NÃO entra aqui — cada página só deve declarar o schema de FAQ que
+// corresponde ao que está visível nela (regra do Google, nada de FAQ fantasma).
+// Home: components/FAQ.jsx. Páginas de serviço: ServiceJsonLd.jsx. Posts do
+// blog: BlogPost.jsx.
 
 const businessLd = {
   "@context": "https://schema.org",
@@ -43,27 +44,11 @@ const businessLd = {
   ],
 };
 
-const faqLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: FAQS.map(({ q, a }) => ({
-    "@type": "Question",
-    name: q,
-    acceptedAnswer: { "@type": "Answer", text: a },
-  })),
-};
-
 export default function JsonLd() {
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(businessLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
-      />
-    </>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(businessLd) }}
+    />
   );
 }
