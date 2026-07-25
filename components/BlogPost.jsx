@@ -7,6 +7,7 @@ import Breadcrumb from "./Breadcrumb";
 import Reveal from "./Reveal";
 import CTAButton from "./CTAButton";
 import SectionHeading from "./SectionHeading";
+import Accordion from "./Accordion";
 import { SITE_URL, waLink } from "@/lib/config";
 import { getPostsByDate } from "@/lib/blog";
 
@@ -52,10 +53,27 @@ function PostJsonLd({ post }) {
     mainEntityOfPage: pageUrl,
   };
 
+  // FAQPage com as MESMAS perguntas exibidas na página (regra do Google) —
+  // mesmo padrão de components/ServiceJsonLd.jsx.
+  const faqLd = post.faqs?.length
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: post.faqs.map(({ q, a }) => ({
+          "@type": "Question",
+          name: q,
+          acceptedAnswer: { "@type": "Answer", text: a },
+        })),
+      }
+    : null;
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(postLd) }} />
+      {faqLd && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
+      )}
     </>
   );
 }
@@ -162,6 +180,20 @@ export default function BlogPost({ post }) {
             </article>
           </div>
         </section>
+
+        {/* FAQ do post — só quando o post define perguntas */}
+        {post.faqs?.length > 0 && (
+          <section className="section-pad">
+            <div className="section-wrap">
+              <SectionHeading title="Perguntas frequentes" />
+              <Reveal delay={120}>
+                <div className="mt-10 max-w-2xl">
+                  <Accordion items={post.faqs} />
+                </div>
+              </Reveal>
+            </div>
+          </section>
+        )}
 
         {/* CTA final */}
         <section className="relative overflow-hidden section-pad">
