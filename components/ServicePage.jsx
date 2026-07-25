@@ -61,7 +61,7 @@ export default function ServicePage({ servico }) {
                   href={waHref}
                   track={`servico_${servico.slug}_hero`}
                   pulse
-                  ariaLabel={`${servico.hero.cta} — abrir WhatsApp`}
+                  ariaLabel={`${servico.hero.cta} (abrir WhatsApp)`}
                   className="w-full sm:w-auto"
                 >
                   {servico.hero.cta}
@@ -176,7 +176,7 @@ export default function ServicePage({ servico }) {
                     href={waHref}
                     track={`servico_${servico.slug}_final`}
                     pulse
-                    ariaLabel={`${servico.hero.cta} — falar no WhatsApp`}
+                    ariaLabel={`${servico.hero.cta} (falar no WhatsApp)`}
                     className="w-full sm:w-auto"
                   >
                     {servico.hero.cta}

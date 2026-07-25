@@ -68,7 +68,7 @@ export default function Footer() {
         <div className="mt-10 rounded-xl bg-obsidian/50 p-4">
           <p className="text-pretty text-sm leading-relaxed text-ink-muted">
             <span className="font-semibold text-ink">PS:</span> o preço de R$497 é
-            de lançamento — restam {PROMO_SLOTS.left} das {PROMO_SLOTS.total}{" "}
+            de lançamento: restam {PROMO_SLOTS.left} das {PROMO_SLOTS.total}{" "}
             vagas. Quando fecharem, volta ao valor normal.
           </p>
         </div>

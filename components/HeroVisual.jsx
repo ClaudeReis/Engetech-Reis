@@ -78,7 +78,7 @@ export default function HeroVisual() {
           seunegocio.com.br › servicos
         </p>
         <p className="font-heading text-[13px] font-semibold leading-snug text-ink">
-          Seu Negócio — atendimento em Botafogo, RJ
+          Seu Negócio: atendimento em Botafogo, RJ
         </p>
         <div className="mt-1 flex items-center gap-1.5">
           <span className="flex gap-0.5 text-brand-cyan">

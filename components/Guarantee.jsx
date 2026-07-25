@@ -16,7 +16,7 @@ export default function Guarantee() {
               </h2>
               <p className="mt-2 text-pretty leading-relaxed text-ink-muted">
                 Se em 7 dias após a entrega você achar que o serviço não valeu, a
-                gente conversa — sem burocracia. Nosso objetivo é que você veja
+                gente conversa, sem burocracia. Nosso objetivo é que você veja
                 resultado, não que você fique preso num contrato que não faz
                 sentido.
               </p>

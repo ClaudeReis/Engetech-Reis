@@ -15,7 +15,7 @@ const SOLUTIONS = [
     icon: Bot,
     tag: "Chatbot",
     title: "Chatbot para o seu site",
-    text: "Automação que responde visitantes do seu site na hora, qualifica o lead e manda pro seu WhatsApp — mesmo de madrugada, mesmo quando você está ocupado atendendo.",
+    text: "Automação que responde visitantes do seu site na hora, qualifica o lead e manda pro seu WhatsApp, mesmo de madrugada, mesmo quando você está ocupado atendendo.",
     points: ["Responde em segundos", "Qualifica leads", "Manda pro WhatsApp"],
     href: "/chatbot-para-site/",
   },

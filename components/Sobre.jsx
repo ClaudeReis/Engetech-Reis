@@ -209,7 +209,7 @@ export default function Sobre() {
                     href={waHref}
                     track="sobre_final"
                     pulse
-                    ariaLabel="Fale comigo — abrir WhatsApp"
+                    ariaLabel="Fale comigo (abrir WhatsApp)"
                     className="w-full sm:w-auto"
                   >
                     Fale comigo

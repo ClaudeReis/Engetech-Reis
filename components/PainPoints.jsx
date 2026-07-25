@@ -5,7 +5,7 @@ import SectionHeading from "./SectionHeading";
 const PAINS = [
   {
     icon: Search,
-    text: "Cliente pesquisa seu serviço no Google — e encontra o concorrente.",
+    text: "Cliente pesquisa seu serviço no Google e encontra o concorrente.",
   },
   {
     icon: MoonStar,
@@ -31,7 +31,7 @@ export default function PainPoints() {
       <div className="section-wrap">
         <SectionHeading
           title="Você já se pegou nessas situações?"
-          subtitle="Você trabalha duro e atende bem. Mas na hora em que o cliente procura, seu negócio não aparece — e o lead vai embora."
+          subtitle="Você trabalha duro e atende bem. Mas na hora em que o cliente procura, seu negócio não aparece, e o lead vai embora."
         />
 
         <ul className="mt-10 grid gap-3 sm:grid-cols-2">
@@ -54,7 +54,7 @@ export default function PainPoints() {
           <p className="mt-8 max-w-2xl text-pretty text-lg leading-relaxed text-ink-muted">
             A EngeTech Reis resolve exatamente isso:{" "}
             <span className="text-ink">presença que aparece onde a busca acontece</span> e{" "}
-            <span className="text-ink">automação que atende na hora</span> — sem
+            <span className="text-ink">automação que atende na hora</span>, sem
             você precisar estar online o tempo todo.
           </p>
         </Reveal>

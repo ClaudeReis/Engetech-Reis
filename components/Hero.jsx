@@ -54,7 +54,7 @@ export default function Hero({
         <Reveal delay={160}>
           <p className="mt-6 max-w-2xl text-pretty text-base leading-relaxed text-ink-muted sm:text-lg">
             A EngeTech Reis cria site, landing page e chatbot para negócio
-            local no Rio de Janeiro — pra você{" "}
+            local no Rio de Janeiro, pra você{" "}
             <span className="text-ink">aparecer, responder e vender</span> sem
             depender só das redes sociais.
           </p>
@@ -66,7 +66,7 @@ export default function Hero({
               href={waLink(WA_MESSAGES.hero)}
               track="hero_cta_principal"
               pulse
-              ariaLabel="Quero minha presença digital agora — abrir WhatsApp"
+              ariaLabel="Quero minha presença digital agora (abrir WhatsApp)"
               className="w-full sm:w-auto"
             >
               Quero minha presença digital agora

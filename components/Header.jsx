@@ -49,7 +49,7 @@ export default function Header() {
         {/* Logo — canto esquerdo (home) */}
         <a
           href="/"
-          aria-label="EngeTech Reis — início"
+          aria-label="EngeTech Reis, início"
           className="rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-obsidian"
         >
           <Logo withWordmark={false} size={38} />

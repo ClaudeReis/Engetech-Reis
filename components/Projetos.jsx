@@ -14,7 +14,7 @@ export default function Projetos() {
         <SectionHeading
           size="pillar"
           title="Do briefing ao ar."
-          subtitle="Cada projeto construído do zero — identidade própria, código limpo, sem template."
+          subtitle="Cada projeto construído do zero: identidade própria, código limpo, sem template."
         />
 
         <div className="mt-10 space-y-4">

@@ -25,8 +25,8 @@ export default function SecondaryOffer() {
                   <span className="font-mono text-ink">{PRICING.institucionalFrom}</span>
                   <br />
                   <span className="text-xs">
-                    (valor final depende de páginas, integrações e personalização
-                    — orçamento sob consulta)
+                    (valor final depende de páginas, integrações e personalização;
+                    orçamento sob consulta)
                   </span>
                 </p>
                 <p>
@@ -52,7 +52,7 @@ export default function SecondaryOffer() {
               href={waLink(WA_MESSAGES.site)}
               track="oferta_site"
               variant="secondary"
-              ariaLabel="Falar sobre meu projeto de site — abrir WhatsApp"
+              ariaLabel="Falar sobre meu projeto de site (abrir WhatsApp)"
               className="w-full shrink-0 sm:w-auto"
             >
               Falar sobre meu projeto

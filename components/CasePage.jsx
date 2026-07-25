@@ -214,7 +214,7 @@ export default function CasePage({ project }) {
                     href={waHref}
                     track={`case_${project.id}_final`}
                     pulse
-                    ariaLabel="Quero um projeto assim — falar no WhatsApp"
+                    ariaLabel="Quero um projeto assim (falar no WhatsApp)"
                     className="w-full sm:w-auto"
                   >
                     Quero um projeto assim

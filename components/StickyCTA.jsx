@@ -48,7 +48,7 @@ export default function StickyCTA() {
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => trackConversion("sticky_mobile_cta")}
-          aria-label="Começar agora — abrir WhatsApp"
+          aria-label="Começar agora (abrir WhatsApp)"
           className="inline-flex shrink-0 items-center gap-1.5 rounded-xl bg-brand-gradient px-4 py-3 font-heading text-sm font-semibold text-obsidian transition-transform active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-obsidian"
         >
           Começar

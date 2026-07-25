@@ -116,14 +116,14 @@ export default function Offer() {
                   <span className="font-mono font-semibold tabular-nums text-ink">
                     {PRICING.monthly}
                   </span>{" "}
-                  de manutenção — chatbot ativo, hospedagem e atualizações
+                  de manutenção: chatbot ativo, hospedagem e atualizações
                 </p>
 
                 <CTAButton
                   href={waLink(WA_MESSAGES.offer)}
                   variant="cta"
                   track="oferta_principal"
-                  ariaLabel="Quero começar agora — abrir WhatsApp"
+                  ariaLabel="Quero começar agora (abrir WhatsApp)"
                   className="mt-6 w-full"
                 >
                   Quero começar agora

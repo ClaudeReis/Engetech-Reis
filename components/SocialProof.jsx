@@ -112,7 +112,7 @@ export default function SocialProof() {
                     </h3>
                     <p className="mt-3 max-w-2xl text-pretty leading-relaxed text-ink-muted lg:text-lg">
                       Você fala diretamente com quem constrói. Cada site e
-                      automação que saem daqui são feitos por mim — do briefing
+                      automação que saem daqui são feitos por mim, do briefing
                       ao ar. Sem equipe escondida, sem terceirização.
                     </p>
                     <a

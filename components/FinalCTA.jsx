@@ -32,10 +32,10 @@ export default function FinalCTA() {
                 href={waLink(WA_MESSAGES.final)}
                 track="cta_final"
                 pulse
-                ariaLabel="Quero começar agora — falar com a EngeTech Reis no WhatsApp"
+                ariaLabel="Quero falar com a EngeTech Reis agora pelo WhatsApp"
                 className="w-full sm:w-auto"
               >
-                Quero começar agora — falar com a EngeTech Reis
+                Quero falar com a EngeTech Reis agora
                 <ArrowRight size={18} aria-hidden="true" />
               </CTAButton>
               <p className="font-mono text-xs text-ink-muted">
