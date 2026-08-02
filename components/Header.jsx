@@ -67,44 +67,48 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Dropdown — seções + páginas de serviço */}
-      {menuOpen && (
-        <nav
-          aria-label="Navegação principal"
-          className="border-t border-edge bg-obsidian/95 backdrop-blur-md"
-        >
-          <p className="px-6 pt-4 pb-1 font-mono text-[10px] uppercase tracking-widest text-ink-subtle">
-            Nesta página
-          </p>
-          {SECTIONS.map(({ label, href }) => (
-            <a
-              key={href}
-              href={href}
-              onClick={() => setMenuOpen(false)}
-              className="flex h-12 items-center px-6 font-mono text-sm uppercase tracking-wider text-ink-muted transition-colors hover:bg-carbon/40 hover:text-brand-cyan"
-            >
-              {label}
-            </a>
-          ))}
+      {/* Dropdown — seções + páginas de serviço.
+          Renderiza SEMPRE e esconde com `hidden` em vez de desmontar. O
+          Googlebot executa JS mas não clica no botão, então desmontar deixava
+          o HTML entregue sem nenhum link de navegação e o /blog/ ficava órfão.
+          Com `hidden` os links continuam no DOM e o menu segue igual pro
+          usuário (display:none também tira do foco e do leitor de tela). */}
+      <nav
+        aria-label="Navegação principal"
+        hidden={!menuOpen}
+        className="border-t border-edge bg-obsidian/95 backdrop-blur-md"
+      >
+        <p className="px-6 pt-4 pb-1 font-mono text-[10px] uppercase tracking-widest text-ink-subtle">
+          Nesta página
+        </p>
+        {SECTIONS.map(({ label, href }) => (
+          <a
+            key={href}
+            href={href}
+            onClick={() => setMenuOpen(false)}
+            className="flex h-12 items-center px-6 font-mono text-sm uppercase tracking-wider text-ink-muted transition-colors hover:bg-carbon/40 hover:text-brand-cyan"
+          >
+            {label}
+          </a>
+        ))}
 
-          <div className="mx-6 my-2 border-t border-edge" />
+        <div className="mx-6 my-2 border-t border-edge" />
 
-          <p className="px-6 pt-1 pb-1 font-mono text-[10px] uppercase tracking-widest text-ink-subtle">
-            Serviços
-          </p>
-          {SERVICE_PAGES.map(({ label, href }) => (
-            <a
-              key={href}
-              href={href}
-              onClick={() => setMenuOpen(false)}
-              className="flex h-12 items-center px-6 font-mono text-sm uppercase tracking-wider text-ink-muted transition-colors hover:bg-carbon/40 hover:text-brand-cyan"
-            >
-              {label}
-            </a>
-          ))}
-          <div className="h-4" />
-        </nav>
-      )}
+        <p className="px-6 pt-1 pb-1 font-mono text-[10px] uppercase tracking-widest text-ink-subtle">
+          Serviços
+        </p>
+        {SERVICE_PAGES.map(({ label, href }) => (
+          <a
+            key={href}
+            href={href}
+            onClick={() => setMenuOpen(false)}
+            className="flex h-12 items-center px-6 font-mono text-sm uppercase tracking-wider text-ink-muted transition-colors hover:bg-carbon/40 hover:text-brand-cyan"
+          >
+            {label}
+          </a>
+        ))}
+        <div className="h-4" />
+      </nav>
     </header>
   );
 }

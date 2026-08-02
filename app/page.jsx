@@ -11,6 +11,7 @@ import Objections from "@/components/Objections";
 import Guarantee from "@/components/Guarantee";
 import Urgency from "@/components/Urgency";
 import FAQ from "@/components/FAQ";
+import BlogTeaser from "@/components/BlogTeaser";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 import StickyCTA from "@/components/StickyCTA";
@@ -56,10 +57,13 @@ export default function Home() {
         <Urgency />
         {/* 12. FAQ */}
         <FAQ />
-        {/* 13. CTA final */}
+        {/* 13. Blog — próximo passo pra quem ainda não vai chamar no WhatsApp,
+            e o caminho de rastreamento da home até /blog/ */}
+        <BlogTeaser />
+        {/* 14. CTA final */}
         <FinalCTA />
       </main>
-      {/* 14. Footer */}
+      {/* 15. Footer */}
       <Footer />
 
       {/* Barra de CTA fixa (mobile) */}

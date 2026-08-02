@@ -13,6 +13,7 @@ import ProjectCard from "./ProjectCard";
 import { waLink, WA_MESSAGES } from "@/lib/config";
 import { PROJECTS } from "@/lib/projetos";
 import { getServico } from "@/lib/servicos";
+import { getPost } from "@/lib/blog";
 
 /**
  * Template de página de serviço (hub-and-spoke). Recebe o objeto `servico`
@@ -27,6 +28,9 @@ export default function ServicePage({ servico }) {
   );
   const outros = servico.outrosServicos
     .map((slug) => getServico(slug))
+    .filter(Boolean);
+  const posts = (servico.postsRelacionados ?? [])
+    .map((slug) => getPost(slug))
     .filter(Boolean);
 
   return (
@@ -135,6 +139,38 @@ export default function ServicePage({ servico }) {
             </Reveal>
           </div>
         </section>
+
+        {/* Leia também — liga o spoke ao blog. Sem estes links os posts só são
+            alcançáveis pelo sitemap, que sinaliza existência mas não passa
+            relevância, e metade deles não chegava a ser indexada. */}
+        {posts.length > 0 && (
+          <section className="section-pad">
+            <div className="section-wrap">
+              <SectionHeading title="Leia também" size="support" />
+              <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {posts.map((p, i) => (
+                  <Reveal key={p.slug} delay={i * 80}>
+                    <a
+                      href={`/blog/${p.slug}/`}
+                      className="card-base group flex h-full flex-col p-6 transition-colors hover:border-brand-cyan/40"
+                    >
+                      <p className="font-mono text-[10px] uppercase tracking-widest text-brand-cyan">
+                        {p.category}
+                      </p>
+                      <h3 className="mt-3 text-balance font-heading text-base font-semibold leading-snug text-ink">
+                        {p.h1}
+                      </h3>
+                      <span className="mt-5 inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-wider text-brand-cyan">
+                        Ler artigo
+                        <span aria-hidden="true" className="transition-transform group-hover:translate-x-0.5">→</span>
+                      </span>
+                    </a>
+                  </Reveal>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* Outros serviços — cruza os spokes */}
         <section className="pb-4">

@@ -33,6 +33,22 @@ export default function Footer() {
             </a>
           </nav>
 
+          {/* Conteúdo — caminho de rastreamento permanente pro blog, portfólio
+              e /sobre/. Sem isto o blog fica órfão: o menu do topo é o único
+              outro link e ele nasce escondido. */}
+          <nav aria-label="Conteúdo" className="flex flex-col gap-3">
+            <p className="font-mono text-xs uppercase tracking-wider text-ink-subtle">Conteúdo</p>
+            <a href="/blog/" className="text-sm text-ink-muted transition-colors hover:text-brand-cyan focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-carbon rounded">
+              Blog
+            </a>
+            <a href="/projetos/" className="text-sm text-ink-muted transition-colors hover:text-brand-cyan focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-carbon rounded">
+              Portfólio
+            </a>
+            <a href="/sobre/" className="text-sm text-ink-muted transition-colors hover:text-brand-cyan focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-carbon rounded">
+              Sobre
+            </a>
+          </nav>
+
           <nav aria-label="Contato" className="flex flex-col gap-3">
             <a
               href={waLink(WA_MESSAGES.final)}
