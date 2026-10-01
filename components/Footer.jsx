@@ -31,6 +31,9 @@ export default function Footer() {
             <a href="/chatbot-para-site/" className="text-sm text-ink-muted transition-colors hover:text-brand-cyan focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-carbon rounded">
               Chatbot para Site
             </a>
+            <a href="/site-para-clinica-de-estetica/" className="text-sm text-ink-muted transition-colors hover:text-brand-cyan focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-carbon rounded">
+              Site para Clínica de Estética
+            </a>
           </nav>
 
           {/* Conteúdo — caminho de rastreamento permanente pro blog, portfólio

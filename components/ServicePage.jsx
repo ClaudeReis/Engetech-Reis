@@ -114,9 +114,56 @@ export default function ServicePage({ servico }) {
           </div>
         </section>
 
+        {/* Conteúdo aprofundado — blocos de lib/servicos.js (`secoes`). Cada bloco:
+            { title, paragraphs?: [html], items?: [html], ordered?: bool }.
+            Existe pra a página ter profundidade que o Google leia, não só cards. */}
+        {servico.secoes?.length > 0 && (
+          <section className="section-pad section-tint">
+            <div className="section-wrap">
+              <div className="max-w-3xl space-y-14">
+                {servico.secoes.map((s) => (
+                  <Reveal key={s.title}>
+                    <div>
+                      <h2 className="text-balance text-2xl font-bold leading-tight tracking-tight sm:text-3xl">
+                        {s.title}
+                      </h2>
+                      {s.paragraphs?.map((html, i) => (
+                        <p
+                          key={i}
+                          className="mt-5 text-pretty leading-relaxed text-ink-muted"
+                          dangerouslySetInnerHTML={{ __html: html }}
+                        />
+                      ))}
+                      {s.items?.length > 0 && (
+                        <ul className="mt-6 space-y-3">
+                          {s.items.map((item, i) => (
+                            <li
+                              key={i}
+                              className="flex items-start gap-3 rounded-xl border border-edge bg-carbon/60 px-4 py-3.5 leading-relaxed text-ink-muted"
+                            >
+                              {s.ordered ? (
+                                <span className="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-gradient-soft font-mono text-xs text-brand-cyan ring-1 ring-inset ring-brand-cyan/30">
+                                  {i + 1}
+                                </span>
+                              ) : (
+                                <span className="mt-2 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-brand-cyan shadow-glow" />
+                              )}
+                              <span dangerouslySetInnerHTML={{ __html: item }} />
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  </Reveal>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* Prova — portfólio filtrado (só renderiza se houver projetos) */}
         {relatedProjects.length > 0 && (
-          <section className="section-pad section-tint">
+          <section className={`section-pad ${servico.secoes?.length ? "" : "section-tint"}`}>
             <div className="section-wrap">
               <SectionHeading title="Projetos que já colocamos no ar" />
               <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
