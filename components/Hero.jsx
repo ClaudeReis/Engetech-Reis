@@ -75,7 +75,7 @@ export default function Hero({
 
             <p className="flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-xs text-ink-muted">
               <span className="inline-flex items-center gap-1.5">
-                <ShieldCheck size={13} aria-hidden="true" /> Contrato mínimo de 6 meses
+                <ShieldCheck size={13} aria-hidden="true" /> Site e domínio no seu nome
               </span>
               <span aria-hidden="true" className="text-edge">•</span>
               <span className="inline-flex items-center gap-1.5">

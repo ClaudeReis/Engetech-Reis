@@ -1,7 +1,7 @@
-import { ArrowRight, Flame } from "lucide-react";
+import { ArrowRight, BadgeCheck } from "lucide-react";
 import CTAButton from "./CTAButton";
 import Reveal from "./Reveal";
-import { waLink, WA_MESSAGES, PRICING, PROMO_SLOTS } from "@/lib/config";
+import { waLink, WA_MESSAGES, PRICING } from "@/lib/config";
 
 const SETUP_ITEMS = PRICING.setupItems;
 const MONTHLY_ITEMS = PRICING.monthlyItems;
@@ -25,13 +25,13 @@ export default function Offer() {
               os paddings somam e comem a largura útil numa tela de 375px. */}
           <div className="card-pillar accent-top p-6 sm:p-10 lg:p-12">
             <p className="font-mono text-xs uppercase tracking-[0.18em] text-ink-subtle">
-              Oferta de lançamento
+              Investimento
             </p>
 
             <h2 className="mt-4 max-w-[16ch] text-balance text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl">
-              Pacote{" "}
+              Site profissional{" "}
               <span className="bg-cta-gradient bg-clip-text text-transparent">
-                Presença Digital Completa
+                no seu nome
               </span>
             </h2>
 
@@ -86,12 +86,9 @@ export default function Offer() {
 
               {/* Coluna direita — preço + ação (o foco) */}
               <div className="card-sunken p-5 sm:p-8">
-                {/* Escassez honesta — número real vindo do config (PROMO_SLOTS).
-                    Fica aqui, e não no topo da seção, para aparecer no ponto
-                    onde a decisão acontece. */}
                 <span className="inline-flex items-center gap-2 rounded-full border border-brand-cyan/35 bg-brand-cyan/[0.08] px-3 py-1.5 font-mono text-[11px] uppercase tracking-wider text-brand-cyan">
-                  <Flame size={12} aria-hidden="true" />
-                  {PROMO_SLOTS.left} de {PROMO_SLOTS.total} vagas
+                  <BadgeCheck size={12} aria-hidden="true" />
+                  Site e domínio no seu nome
                 </span>
 
                 <p className="mt-5 font-mono text-[13px] tabular-nums text-ink-subtle">
@@ -107,7 +104,7 @@ export default function Offer() {
                 </p>
 
                 <p className="mt-2 font-mono text-[11px] uppercase tracking-[0.12em] text-ink-subtle">
-                  setup único
+                  criação, pagamento único
                 </p>
 
                 {/* Mensalidade legível de cara — sem letra miúda, sem surpresa depois */}
@@ -116,7 +113,7 @@ export default function Offer() {
                   <span className="font-mono font-semibold tabular-nums text-ink">
                     {PRICING.monthly}
                   </span>{" "}
-                  de manutenção: chatbot ativo, hospedagem e atualizações
+                  de hospedagem e manutenção
                 </p>
 
                 <CTAButton
@@ -131,7 +128,7 @@ export default function Offer() {
                 </CTAButton>
 
                 <p className="mt-4 text-center font-mono text-[11px] tracking-[0.03em] text-ink-subtle">
-                  Contrato mínimo de 6 meses · Garantia de 7 dias
+                  Garantia de 7 dias · Chatbot opcional: +{PRICING.chatbotMonthly}
                 </p>
               </div>
             </div>

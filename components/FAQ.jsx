@@ -35,11 +35,11 @@ export const FAQS = [
   },
   {
     q: "Como funciona o suporte mensal?",
-    a: "A mensalidade de R$497 cobre tudo: chatbot ativo com ajustes de fluxo, hospedagem, 1 atualização de conteúdo por mês e canal direto pra tirar dúvidas.",
+    a: "A mensalidade de R$130 cobre hospedagem, acompanhamento do site no ar, 1 atualização de conteúdo por mês e canal direto pelo WhatsApp pra tirar dúvidas. O chatbot é opcional e entra como adicional.",
   },
   {
     q: "Como pago?",
-    a: "Pix ou cartão. O setup é cobrado na aprovação do projeto. A mensalidade começa no mês seguinte à entrega.",
+    a: "Pix ou cartão. A criação é cobrada na aprovação do projeto. A mensalidade começa no mês seguinte à entrega.",
   },
   {
     q: "Qual a diferença entre Landing Page e site completo?",

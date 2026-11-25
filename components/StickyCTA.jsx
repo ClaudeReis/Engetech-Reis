@@ -37,10 +37,10 @@ export default function StickyCTA() {
       <div className="mx-auto flex max-w-md items-center justify-between gap-3 rounded-2xl border border-edge bg-carbon/95 p-2.5 pl-4 shadow-glow backdrop-blur-md">
         <div className="min-w-0">
           <p className="truncate font-heading text-sm font-semibold leading-tight text-ink">
-            Presença digital completa
+            Site no seu nome
           </p>
           <p className="truncate font-mono text-xs text-ink-muted">
-            R$497 • resposta em 24h
+            R$497 + R$130/mês
           </p>
         </div>
         <a

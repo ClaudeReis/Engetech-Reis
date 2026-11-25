@@ -9,7 +9,6 @@ import Offer from "@/components/Offer";
 import SecondaryOffer from "@/components/SecondaryOffer";
 import Objections from "@/components/Objections";
 import Guarantee from "@/components/Guarantee";
-import Urgency from "@/components/Urgency";
 import FAQ from "@/components/FAQ";
 import BlogTeaser from "@/components/BlogTeaser";
 import FinalCTA from "@/components/FinalCTA";
@@ -53,8 +52,6 @@ export default function Home() {
         <Objections />
         {/* 10. Garantia */}
         <Guarantee />
-        {/* 11. Urgência */}
-        <Urgency />
         {/* 12. FAQ */}
         <FAQ />
         {/* 13. Blog — próximo passo pra quem ainda não vai chamar no WhatsApp,

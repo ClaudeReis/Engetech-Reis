@@ -5,7 +5,6 @@ import {
   WA_MESSAGES,
   INSTAGRAM_URL,
   CONTACT_EMAIL,
-  PROMO_SLOTS,
 } from "@/lib/config";
 
 export default function Footer() {
@@ -86,9 +85,9 @@ export default function Footer() {
             padrão de agrupamento interno adotado na Offer) */}
         <div className="mt-10 rounded-xl bg-obsidian/50 p-4">
           <p className="text-pretty text-sm leading-relaxed text-ink-muted">
-            <span className="font-semibold text-ink">PS:</span> o preço de R$497 é
-            de lançamento: restam {PROMO_SLOTS.left} das {PROMO_SLOTS.total}{" "}
-            vagas. Quando fecharem, volta ao valor normal.
+            <span className="font-semibold text-ink">PS:</span> o site e o domínio
+            ficam no seu nome, não no meu. São R$497 pra criar e R$130 por mês de
+            hospedagem e manutenção.
           </p>
         </div>
 

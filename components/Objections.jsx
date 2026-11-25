@@ -5,7 +5,7 @@ import SectionHeading from "./SectionHeading";
 const OBJECTIONS = [
   {
     q: "“É caro!”",
-    a: "R$497 de setup + R$497/mês dá cerca de R$17 por dia pra aparecer no Google e ter atendimento automático 24h. É menos do que muita gente gasta impulsionando post que some em 3 dias, e aqui é ativo permanente trabalhando por você todo mês.",
+    a: "São R$497 uma vez e R$130 por mês, pouco mais de R$4 por dia, pra ter um site no seu nome aparecendo no Google. É menos do que muita gente gasta impulsionando post que some em 3 dias, e aqui é um ativo que continua trabalhando por você todo mês.",
   },
   {
     q: "“Não preciso de site. Meu Instagram resolve.”",
