@@ -11,11 +11,22 @@ const STATS = [
   { value: "7 dias", label: "pro seu site no ar" },
 ];
 
-// Depoimentos REAIS. Comece vazio — a seção de depoimentos só aparece quando
-// houver casos reais aqui (nada de prova social inventada no ar).
-// Para ativar, adicione objetos: { name, role, quote }.
+// Depoimentos REAIS, copiados das avaliações do Perfil da Empresa no Google,
+// com autorização dos clientes (confirmada pelo Reis em 25/11/2026).
+// Nunca inventar nem editar o sentido do texto. Formato: { name, role, quote }.
 const TESTIMONIALS = [
-  // { name: "Maria Silva", role: "Nutricionista · Botafogo", quote: "..." },
+  {
+    name: "Leandro Moncada",
+    role: "MCD Soluções Elétricas · avaliação no Google",
+    quote:
+      "Serviço de excelência, atendimento super rápido e sem complicações. Nota 1000, super indico!",
+  },
+  {
+    name: "Fernando",
+    role: "Colosso Reformas e Construções · avaliação no Google",
+    quote:
+      "Ótimo atendimento. Super confiável. Obrigado pelo atendimento e pelos serviços prestados. Meu site ficou muito top. Se eu pudesse, daria mil estrelas!",
+  },
 ];
 
 export default function SocialProof() {
@@ -42,9 +53,9 @@ export default function SocialProof() {
           ))}
         </div>
 
-        {hasTestimonials ? (
+        {hasTestimonials && (
           /* Depoimentos reais (só renderiza quando o array tem itens) */
-          <div className="mt-6 grid gap-4 md:grid-cols-3">
+          <div className="mt-6 grid gap-4 md:grid-cols-2">
             {TESTIMONIALS.map((t, i) => (
               <Reveal key={i} delay={i * 90}>
                 <figure className="card-base flex h-full flex-col p-6 transition-all duration-300 hover:border-brand-cyan/40 hover:shadow-glow active:scale-[0.99]">
@@ -75,8 +86,9 @@ export default function SocialProof() {
               </Reveal>
             ))}
           </div>
-        ) : (
-          /* Founder block: foto + bio — largura cheia, alinhado à esquerda */
+        )}
+
+        {/* Founder block: foto + bio — largura cheia, alinhado à esquerda */}
           <Reveal>
             <div className="card-base mt-6 overflow-hidden">
               <div className="overflow-hidden rounded-2xl bg-carbon">
@@ -127,7 +139,6 @@ export default function SocialProof() {
               </div>
             </div>
           </Reveal>
-        )}
       </div>
     </section>
   );
